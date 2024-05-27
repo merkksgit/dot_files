@@ -1,0 +1,25 @@
+#clear screen
+alias cls='clear'
+
+#rm with confirmation
+alias rm='rm -i'
+
+#Apt-get update/upgrade#
+#alias update='sudo apt-get update'
+#alias upgrade='sudo apt-get upgrade'
+
+#lsd aliases
+#alias ls='lsd -F -1'
+alias ls='lsd'
+
+alias l='ls -l'
+alias la='ls -a'
+alias lla='ls -la'
+alias lt='ls --tree'
+
+#nvim
+alias nv='nvim'
+alias ff='nvim $(fzf)'
+
+#history
+alias hh='history | fzf +s --tac'
