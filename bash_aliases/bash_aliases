@@ -21,5 +21,14 @@ alias lt='ls --tree'
 alias nv='nvim'
 alias ff='nvim $(fzf)'
 
+#VScode
+alias cc='code $(fzf)'
+
+
 #history
 alias hh='history | fzf +s --tac'
+
+#fzf
+
+# Set up fzf key bindings and fuzzy completion (toimii ainoastaa versiossa 0.48.0 ja uudemmissa)
+# eval "$(fzf --bash)"
