@@ -1,5 +1,7 @@
 set number
 " set noundofile
+" leaderkey
+let mapleader = ","
 
 call plug#begin()
     " Color Scheme
@@ -12,6 +14,11 @@ call plug#begin()
     Plug 'scrooloose/NERDTree'
     " Comment Stuff Out
     Plug 'tpope/vim-commentary'
+    " GitHub stuff
+    Plug 'tpope/vim-fugitive'
+    " Telescope
+    Plug 'nvim-lua/plenary.nvim'
+    Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.6' }
     " Status/Tabline
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
@@ -23,12 +30,19 @@ call plug#begin()
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 call plug#end()
 
-" Colorschemes:
-  " colorscheme onedark
+" Open NERDTree when no file on command line
+function! StartUp()
+    if 0 == argc()
+        NERDTree
+    end
+endfunction
+
+autocmd VimEnter * call StartUp()
+
 
   " Vim
 let g:onedark_config = {
-    \ 'style': 'darker',
+    \ 'style': 'deep',
 \}
 colorscheme onedark
 
@@ -47,10 +61,6 @@ let g:Powerline_symbols = "fancy"
 let g:Powerline_dividers_override = ["\Ue0b0","\Ue0b1","\Ue0b2","\Ue0b3"]
 let g:Powerline_symbols_override = {'BRANCH': "\Ue0a0", 'LINE': "\Ue0a1", 'RO': "\Ue0a2"}
 let g:airline_powerline_fonts = 1
-let g:airline_right_alt_sep = ''
-let g:airline_right_sep = ''
-let g:airline_left_alt_sep= ''
-let g:airline_left_sep = ''
 
 " air-line
 let g:airline_powerline_fonts = 1
