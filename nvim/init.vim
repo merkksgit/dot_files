@@ -1,9 +1,18 @@
 set number
 " set noundofile
-" leaderkey
-let mapleader = ","
+
+" Leader key
+let mapleader = ','
+
+" Find files using Telescope command-line sugar.
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
 call plug#begin()
+    "Better escape
+    Plug 'jdhao/better-escape.vim'
     " Color Scheme
     Plug 'navarasu/onedark.nvim'
     " Auto pairs for '{' '[' '('
@@ -16,16 +25,16 @@ call plug#begin()
     Plug 'tpope/vim-commentary'
     " GitHub stuff
     Plug 'tpope/vim-fugitive'
-    " Telescope
-    Plug 'nvim-lua/plenary.nvim'
-    Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.6' }
     " Status/Tabline
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
+    " Telescope
+    Plug 'nvim-lua/plenary.nvim'
+    Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.6' }
     " Icons
     Plug 'ryanoasis/vim-devicons'
-    " Theme
-    " Plug 'vim-ctrlspace/vim-ctrlspace'
+    " Treesitter
+    Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
     "fzf
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 call plug#end()
@@ -39,8 +48,7 @@ endfunction
 
 autocmd VimEnter * call StartUp()
 
-
-  " Vim
+" Vim: Change style: options: dark, darker, cool, deep, warm, warmer, light
 let g:onedark_config = {
     \ 'style': 'deep',
 \}
@@ -49,7 +57,7 @@ colorscheme onedark
 
 " Airline Themes
 " let g:airline_theme='base16_atelier_lakeside'
-
+"
 let g:airline#extensions#tabline#enabled = 1
 
 " Always show tabs
@@ -61,6 +69,10 @@ let g:Powerline_symbols = "fancy"
 let g:Powerline_dividers_override = ["\Ue0b0","\Ue0b1","\Ue0b2","\Ue0b3"]
 let g:Powerline_symbols_override = {'BRANCH': "\Ue0a0", 'LINE': "\Ue0a1", 'RO': "\Ue0a2"}
 let g:airline_powerline_fonts = 1
+let g:airline_right_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_left_alt_sep= ''
+let g:airline_left_sep = ''
 
 " air-line
 let g:airline_powerline_fonts = 1
@@ -116,7 +128,7 @@ let g:airline_symbols.linenr = ''
 
 " Default fzf layout
 " - Popup window (center of the screen)
-" let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.6 } }
+let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.6 } }
 
 " - Popup window (center of the current window)
 let g:fzf_layout = { 'window': { 'width': 0.6, 'height': 0.6, 'relative': v:true } }
