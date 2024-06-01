@@ -1,8 +1,14 @@
+" Line numbers
 set number
-" set noundofile
+
+" Not case sensitive
+set ignorecase
 
 " Leader key
 let mapleader = ','
+
+" use jj to escape insert mode.
+let g:better_escape_shortcut = 'kk'
 
 " Find files using Telescope command-line sugar.
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
@@ -37,6 +43,10 @@ call plug#begin()
     Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
     "fzf
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+    " Markdown preview
+    Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+    " Markdown table of contents
+    Plug 'mzlogin/vim-markdown-toc'
 call plug#end()
 
 " Open NERDTree when no file on command line
@@ -108,10 +118,10 @@ let g:airline_symbols.linenr = ''
 "FZF
 
 " This is the default extra key bindings
-" let g:fzf_action = {
-"   \ 'ctrl-t': 'tab split',
-"   \ 'ctrl-x': 'split',
-"   \ 'ctrl-v': 'vsplit' }
+let g:fzf_action = {
+  \ 'ctrl-t': 'tab split',
+  \ 'ctrl-x': 'split',
+  \ 'ctrl-v': 'vsplit' }
 
 " An action can be a reference to a function that processes selected lines
 " function! s:build_quickfix_list(lines)
