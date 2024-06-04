@@ -50,13 +50,13 @@ call plug#begin()
 call plug#end()
 
 " Open NERDTree when no file on command line
-function! StartUp()
-    if 0 == argc()
-        NERDTree
-    end
-endfunction
+" function! StartUp()
+"     if 0 == argc()
+"         NERDTree
+"     end
+" endfunction
 
-autocmd VimEnter * call StartUp()
+" autocmd VimEnter * call StartUp()
 
 " Vim: Change style: options: dark, darker, cool, deep, warm, warmer, light
 let g:onedark_config = {
