@@ -1,0 +1,22 @@
+# Setup fzf
+# ---------
+if [[ ! "$PATH" == */home/merkks/.fzf/bin* ]]; then
+  PATH="${PATH:+${PATH}:}/home/merkks/.fzf/bin"
+fi
+
+eval "$(fzf --bash)"
+
+#########
+
+export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
+  --color=fg:#d0d0d0,fg+:#00bfff,bg:#262626,bg+:#262626
+  --color=hl:#00bfff,hl+:#00bfff,info:#00bfff,marker:#87ff00
+  --color=prompt:#00bfff,spinner:#00bfff,pointer:#00bfff,header:#00bfff
+  --color=border:#262626,label:#aeaeae,query:#d9d9d9
+  --border="rounded" --border-label="" --preview-window="border-rounded" --prompt=": "
+  --marker=">" --pointer=">" --separator="─" --scrollbar="│"
+  --height 60%'
+
+  # --preview "batcat --color=always {}"
+
+
