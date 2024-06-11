@@ -7,7 +7,7 @@ set ignorecase
 " Leader key
 let mapleader = ','
 
-" use kk to escape insert mode.
+" use jj to escape insert mode.
 let g:better_escape_shortcut = 'kk'
 
 " Find files using Telescope command-line sugar.
@@ -21,6 +21,7 @@ call plug#begin()
     Plug 'jdhao/better-escape.vim'
     " Color Scheme
     Plug 'navarasu/onedark.nvim'
+    Plug 'ghifarit53/tokyonight-vim'
     " Auto pairs for '{' '[' '('
     Plug 'jiangmiao/auto-pairs'
     " Better Suntax Support
@@ -50,24 +51,32 @@ call plug#begin()
 call plug#end()
 
 " Open NERDTree when no file on command line
-function! StartUp()
-    if 0 == argc()
-        NERDTree
-    end
-endfunction
+" function! StartUp()
+"     if 0 == argc()
+"         NERDTree
+"     end
+" endfunction
 
-autocmd VimEnter * call StartUp()
+" autocmd VimEnter * call StartUp()
 
 " Vim: Change style: options: dark, darker, cool, deep, warm, warmer, light
-let g:onedark_config = {
-    \ 'style': 'deep',
-\}
-colorscheme onedark
+" let g:onedark_config = {
+"     \ 'style': 'deep',
+" \}
+" colorscheme onedark
 
+ " Airline Themes (tabs)
+let g:airline_theme='tokyonight'
 
-" Airline Themes
-" let g:airline_theme='base16_atelier_lakeside'
-"
+"  Backround
+set termguicolors
+
+let g:tokyonight_style = 'storm' " available: night, storm
+let g:tokyonight_enable_italic = 1
+
+colorscheme tokyonight
+
+" Automatically displays all buffers when there's only one tab open
 let g:airline#extensions#tabline#enabled = 1
 
 " Always show tabs
