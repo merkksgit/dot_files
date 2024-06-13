@@ -19,7 +19,7 @@ abstracts = {
   ##
 
   # text to insert at the beginning of each non-message line
-  line_start = "%B*%W*%B*%n ";
+  line_start = "%m*%M*%m*%n ";
 
   # timestamp styling, nothing by default
   timestamp = "$*";
@@ -74,7 +74,7 @@ abstracts = {
   ##
 
   # the basic styling of how to print message, $0 = nick mode, $1 = nick
-  msgnick = "%B[%w$0%n$1-%B ]%n %|";
+  msgnick = "%b[%w$0%n$1-%b ]%n %|";
 
   # message from you is printed. "msgownnick" specifies the styling of the
   # nick ($0 part in msgnick) and "ownmsgnick" specifies the styling of the
@@ -229,8 +229,8 @@ abstracts = {
 
   prompt = "[$*] ";
 
-  sb = " %b[%n$*%b]%n";
-  sbmode = "(%b+%n$*)";
+  sb = " %b[%m$*%b]%n";
+  sbmode = "(%m+%m$*)";
   sbaway = " (%GzZzZ%n)";
   sbservertag = ":$0 (change with ^X)";
   sbnickmode = "$0";
@@ -238,13 +238,13 @@ abstracts = {
   # activity in statusbar
 
   # ',' separator
-  sb_act_sep = "%b$*";
+  sb_act_sep = "%m$*";
   # normal text
-  sb_act_text = "%b$*";
+  sb_act_text = "%m$*";
   # public message
   sb_act_msg = "%W$*";
   # hilight
-  sb_act_hilight = "%B$*";
+  sb_act_hilight = "%M$*";
   # hilight with specified color, $0 = color, $1 = text
-  sb_act_hilight_color = "$0$1-%n";
+  sb_act_hilight_color = "$0$1-%M";
 };
