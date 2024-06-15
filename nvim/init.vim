@@ -1,3 +1,6 @@
+" lua file
+lua require('init')
+
 " Line numbers
 set number
 
@@ -48,7 +51,18 @@ call plug#begin()
     Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
     " Markdown table of contents
     Plug 'mzlogin/vim-markdown-toc'
-call plug#end()
+    " terminal in floating window
+    Plug 'voldikss/vim-floaterm'
+    " CMDpalette: floating command-line window
+    Plug 'hachy/cmdpalette.nvim'
+    call plug#end()
+
+" Floaterm keymappings: floating terminal
+let g:floaterm_keymap_new = '<Leader>tt'
+" let g:floaterm_keymap_new    = '<F7>'
+" let g:floaterm_keymap_prev   = '<F8>'
+" let g:floaterm_keymap_next   = '<F9>'
+" let g:floaterm_keymap_toggle = '<F12>'
 
 " Open NERDTree when no file on command line
 " function! StartUp()
