@@ -1,15 +1,15 @@
 user: 0
 group: 0
 permission:
-  read: 0
-  write: 0
-  exec: 0
+  read: 15
+  write: 15
+  exec: 15
   exec-sticky: 0
   no-access: 250
   octal: 245
 date:
-  hour-old: 0
-  day-old: 0
+  hour-old: 255
+  day-old: 255
   older: 245
 size:
   none: 250
