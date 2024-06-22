@@ -1,16 +1,22 @@
 #clear screen
 alias cls='clear'
 
+# Zoxide with FZF
+alias ff='zi'
+
+# Lazygit
+
+alias lg='lazygit'
+
 #rm with confirmation
-alias rm='rm -i'
+#alias rm='rm -i'
 
 #Apt-get update/upgrade#
 #alias update='sudo apt-get update'
 #alias upgrade='sudo apt-get upgrade'
 
 #lsd aliases
-#alias ls='lsd -F -1'
-alias ls='lsd'
+alias ls='lsd -1'
 
 alias l='ls -l'
 alias la='ls -a'
@@ -19,7 +25,6 @@ alias lt='ls --tree'
 
 #nvim
 alias nv='nvim'
-alias ff='nvim $(fzf)'
 
 #VScode
 alias cc='code $(fzf)'
@@ -32,3 +37,6 @@ alias hh='history | fzf +s --tac'
 
 # Set up fzf key bindings and fuzzy completion (toimii ainoastaa versiossa 0.48.0 ja uudemmissa)
 # eval "$(fzf --bash)"
+
+#tmux
+alias tmuxa='tmux attach'
