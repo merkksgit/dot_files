@@ -1,6 +1,5 @@
 " lua file
 lua require('init')
-
 " Line numbers
 set number
 
@@ -53,8 +52,10 @@ call plug#begin()
     Plug 'mzlogin/vim-markdown-toc'
     " terminal in floating window
     Plug 'voldikss/vim-floaterm'
-    " CMDpalette: floating command-line window
+    " floating cmdline
     Plug 'hachy/cmdpalette.nvim'
+    " Starting page
+    Plug 'mhinz/vim-startify'
     call plug#end()
 
 " Floaterm keymappings: floating terminal
@@ -133,7 +134,7 @@ let g:airline_left_sep = ''
 let g:airline_left_alt_sep = ''
 let g:airline_right_sep = ''
 let g:airline_right_alt_sep = ''
-let g:airline_symbols.branch = ''
+let g:airline_symbols.branch = ''
 let g:airline_symbols.readonly = ''
 let g:airline_symbols.linenr = ''
 
@@ -151,7 +152,7 @@ let g:fzf_action = {
 "   call setqflist(map(copy(a:lines), '{ "filename": v:val, "lnum": 1 }'))
 "   copen
 "   cc
-" endfunction
+" endfunctionrequire("cmdpalette").setup({})
 
 " let g:fzf_action = {
 "   \ 'ctrl-q': function('s:build_quickfix_list'),
