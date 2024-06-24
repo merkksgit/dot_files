@@ -128,4 +128,4 @@ export PATH="$PATH:/opt/nvim-linux64/bin"
 # make nvim default editor
 
 export EDITOR='nvim'
-export EDITOR='nvim'
+export VISUAL='nvim'
