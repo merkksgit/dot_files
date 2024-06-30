@@ -118,8 +118,12 @@ fi
 
 
 # oh-my-posh-theme
-eval "$(oh-my-posh init bash --config ~/oh-my-posh-themes/agnosterplus.omp.json)"
+eval "$(oh-my-posh init bash --config ~/oh-my-posh-themes/zen.merkks.toml)"
+# eval "$(oh-my-posh init bash --config ~/oh-my-posh-themes/v2-tokyo-night-merkks.omp.json)"
+# eval "$(oh-my-posh init bash --config ~/oh-my-posh-themes/dark-night-merkks.omp.json)"
+# eval "$(oh-my-posh init bash --config ~/oh-my-posh-themes/testi.json)"
 
+# FZF
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 # NVIM
@@ -129,3 +133,6 @@ export PATH="$PATH:/opt/nvim-linux64/bin"
 
 export EDITOR='nvim'
 export VISUAL='nvim'
+
+# zoxide, better CD command
+eval "$(zoxide init bash)"
