@@ -5,6 +5,7 @@ alias cls='clear'
 alias ff='zi'
 
 # Lazygit
+
 alias lg='lazygit'
 
 #rm with confirmation
@@ -28,6 +29,7 @@ alias nv='nvim'
 #VScode
 alias cc='code $(fzf)'
 
+
 #history
 alias hh='history | fzf +s --tac'
 
@@ -38,3 +40,8 @@ alias hh='history | fzf +s --tac'
 
 #tmux
 alias tmuxa='tmux attach'
+
+#xsel
+alias pbcopy='xsel --input --clipboard'
+alias pbpaste='xsel --output --clipboard'
+
