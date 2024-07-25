@@ -11,10 +11,6 @@ alias lg='lazygit'
 #rm with confirmation
 #alias rm='rm -i'
 
-#Apt-get update/upgrade#
-#alias update='sudo apt-get update'
-#alias upgrade='sudo apt-get upgrade'
-
 #lsd aliases
 alias ls='lsd -1'
 
@@ -29,15 +25,11 @@ alias nv='nvim'
 #VScode
 alias cc='code $(fzf)'
 
-
 #history
 alias hh='history | fzf +s --tac'
 
 #fzf
-
 alias nvf='nvim $(fzf -m --preview="batcat --color=always {}")'
-# Set up fzf key bindings and fuzzy completion (toimii ainoastaa versiossa 0.48.0 ja uudemmissa)
-# eval "$(fzf --bash)"
 
 #tmux
 alias tmuxa='tmux attach'
