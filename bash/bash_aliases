@@ -1,17 +1,8 @@
 #clear screen
 alias cls='clear'
 
-# Zoxide with FZF
-alias ff='zi'
-
-# Lazygit
-
-alias lg='lazygit'
-
-#rm with confirmation
-#alias rm='rm -i'
-
 #lsd aliases
+#alias ls='lsd -F -1'
 alias ls='lsd -1'
 
 alias l='ls -l'
@@ -19,22 +10,24 @@ alias la='ls -a'
 alias lla='ls -la'
 alias lt='ls --tree'
 
-#nvim
+# nvim
 alias nv='nvim'
 
-#VScode
-alias cc='code $(fzf)'
+# fzf preview -> open with vscode
+alias cc='code $(fzf -m --preview="batcat --color=always {}")'
 
-#history
-alias hh='history | fzf +s --tac'
-
-#fzf
+# fzf preview -> open with nvim
 alias nvf='nvim $(fzf -m --preview="batcat --color=always {}")'
 
 #tmux
 alias tmuxa='tmux attach'
 
-#xsel
+#fzf with zoxide
+alias ff='cdi'
+
+# Lazygit
+alias lg='lazygit'
+
+# xsel
 alias pbcopy='xsel --input --clipboard'
 alias pbpaste='xsel --output --clipboard'
-
