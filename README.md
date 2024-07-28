@@ -23,19 +23,31 @@ This repository contains my personal configuration files (dotfiles) for various 
 ### irssi
 
 ```
-~/.irssi
+~/.irssi/irssi.colors
+```
+
+```
+~/.irssi/irssi.theme
 ```
 
 ### lsd
 
 ```
-~/.config/lsd
+~/.config/lsd/colors.yaml
+```
+
+```
+~/.config/lsd/config.yaml
 ```
 
 ### nvim
 
 ```
-~/.config/nvim
+~/.config/nvim/init.vim
+```
+
+```
+~/.config/nvim/lua
 ```
 
 ### tmux
