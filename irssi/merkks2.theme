@@ -107,7 +107,7 @@ abstracts = {
 
   # public message in channel, $0 = nick mode, $1 = nick
   pubmsgnick = "%w{msgnick $0 $1-}";
-  pubnick = "%N$*%n";
+  pubnick = "%c$*%n";
 
   # public message in channel meant for me, $0 = nick mode, $1 = nick
   pubmsgmenick = "{msgnick $0 $1-}";
