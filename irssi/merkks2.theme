@@ -1,14 +1,14 @@
-
+# 
 # ███╗   ███╗███████╗██████╗ ██╗  ██╗██╗  ██╗███████╗
 # ████╗ ████║██╔════╝██╔══██╗██║ ██╔╝██║ ██╔╝██╔════╝
 # ██╔████╔██║█████╗  ██████╔╝█████╔╝ █████╔╝ ███████╗
 # ██║╚██╔╝██║██╔══╝  ██╔══██╗██╔═██╗ ██╔═██╗ ╚════██║
 # ██║ ╚═╝ ██║███████╗██║  ██║██║  ██╗██║  ██╗███████║
 # ╚═╝     ╚═╝╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝
+                                                   
 
-
-#	An Irssi theme by merkks
-# To use this theme, put it in your Irssi directory and use /set theme merkks2
+#	An Irssi theme by merkks  				
+# To use this theme, put it in your Irssi directory and use /set theme merkks
 
 #############################################################################
 
@@ -28,7 +28,7 @@ abstracts = {
   ##
 
   # text to insert at the beginning of each non-message line
-  line_start = "%m  ";
+  line_start = "%m*%M*%m*%n ";
 
   # timestamp styling, nothing by default
   timestamp = "%b$*";
@@ -83,7 +83,7 @@ abstracts = {
   ##
 
   # the basic styling of how to print message, $0 = nick mode, $1 = nick
-  msgnick = "%b%w$0%n$1-%b:%K %|";
+  msgnick = "%w$0%n$1-%b: %n %|";
 
   # message from you is printed. "msgownnick" specifies the styling of the
   # nick ($0 part in msgnick) and "ownmsgnick" specifies the styling of the
@@ -236,7 +236,7 @@ abstracts = {
   topicsbstart = "{sbstart $*}";
   topicsbend = "{sbend $*}";
 
-  prompt = "%Y[$*] ";
+  prompt = "%b[%Y$*%b] ";
 
   sb = " %b[%m$*%b]%n";
   sbmode = "(%m+%m$*)";
