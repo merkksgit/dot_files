@@ -23,10 +23,6 @@ This repository contains my personal configuration files (dotfiles) for various 
 ### irssi
 
 ```
-~/.irssi/irssi.colors
-```
-
-```
 ~/.irssi/merkks.theme
 ```
 
