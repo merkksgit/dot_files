@@ -9,7 +9,7 @@ set ignorecase
 " Leader key
 let mapleader = ','
 
-" use jj to escape insert mode.
+" use kk to escape insert mode.
 let g:better_escape_shortcut = 'kk'
 
 " Find files using Telescope command-line sugar.
