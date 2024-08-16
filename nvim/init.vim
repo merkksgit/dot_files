@@ -2,13 +2,10 @@
 lua require('init')
 " Line numbers
 set number
-
 " Not case sensitive
 set ignorecase
-
 " Leader key
 let mapleader = ','
-
 " use kk to escape insert mode.
 let g:better_escape_shortcut = 'kk'
 
@@ -65,30 +62,15 @@ let g:floaterm_keymap_new = '<Leader>tt'
 " let g:floaterm_keymap_next   = '<F9>'
 " let g:floaterm_keymap_toggle = '<F12>'
 
-" Open NERDTree when no file on command line
-" function! StartUp()
-"     if 0 == argc()
-"         NERDTree
-"     end
-" endfunction
-
-" autocmd VimEnter * call StartUp()
-
-" Vim: Change style: options: dark, darker, cool, deep, warm, warmer, light
-" let g:onedark_config = {
-"     \ 'style': 'deep',
-" \}
-" colorscheme onedark
-
  " Airline Themes (tabs)
 let g:airline_theme='tokyonight'
+" let g:airline_theme='transparent'
 
 "  Backround
 set termguicolors
 
 let g:tokyonight_style = 'storm' " available: night, storm
 let g:tokyonight_enable_italic = 1
-
 colorscheme tokyonight
 
 " Automatically displays all buffers when there's only one tab open
@@ -109,6 +91,7 @@ let g:airline_left_alt_sep= ''
 let g:airline_left_sep = ''
 
 " air-line
+let g:airline#extensions#tabline#formatter = 'unique_tail'
 let g:airline_powerline_fonts = 1
 
 if !exists('g:airline_symbols')
@@ -136,7 +119,7 @@ let g:airline_right_sep = ''
 let g:airline_right_alt_sep = ''
 let g:airline_symbols.branch = ''
 let g:airline_symbols.readonly = ''
-let g:airline_symbols.linenr = ''
+let g:airline_symbols.linenr = ' '
 
 
 "FZF
@@ -197,3 +180,4 @@ let g:startify_custom_header = [
     \ '     ██║ ╚████║███████╗╚██████╔╝ ╚████╔╝ ██║██║ ╚═╝ ██║',
     \ '     ╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝',
     \ ]
+
