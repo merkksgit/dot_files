@@ -7,7 +7,7 @@ set ignorecase
 " Leader key
 let mapleader = ','
 " use kk to escape insert mode.
-let g:better_escape_shortcut = 'kk'
+" let g:better_escape_shortcut = 'kk'
 
 " Find files using Telescope command-line sugar.
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
@@ -123,7 +123,6 @@ let g:airline_symbols.linenr = ' '
 
 
 "FZF
-
 " This is the default extra key bindings
 let g:fzf_action = {
   \ 'ctrl-t': 'tab split',
