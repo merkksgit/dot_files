@@ -14,6 +14,12 @@ set scrolloff=10
 nnoremap <SPACE> <Nop>
 let mapleader=" "
 
+" Move lines up and down
+nnoremap <s-j> :m .+1<CR>==
+nnoremap <s-k> :m .-2<CR>==
+vnoremap <s-j> :m '>+1<CR>gv=gv
+vnoremap <s-k> :m '<-2<CR>gv=gv
+
 " use kk to escape insert mode.
 " let g:better_escape_shortcut = 'kk'
 
@@ -157,9 +163,9 @@ let g:fzf_layout = { 'window': { 'width': 0.6, 'height': 0.6, 'relative': v:true
 " let g:fzf_layout = { 'down': '40%' }
 
 " - Window using a Vim command
-" let g:fzf_layout = { 'window': 'enew' }
-" let g:fzf_layout = { 'window': '-tabnew' }
-" let g:fzf_layout = { 'window': '10new' }
+let g:fzf_layout = { 'window': 'enew' }
+let g:fzf_layout = { 'window': '-tabnew' }
+let g:fzf_layout = { 'window': '10new' }
 
 " Customize fzf colors to match your color scheme
 " - fzf#wrap translates this to a set of `--color` options
