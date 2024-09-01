@@ -4,10 +4,24 @@ lua require('init')
 set number
 " Not case sensitive
 set ignorecase
-" Leader key
-let mapleader = ','
+" Scroll off
+set scrolloff=10
+
+" Leader key comma
+" let mapleader = ','
+
+" Leader key space
+nnoremap <SPACE> <Nop>
+let mapleader=" "
+
 " use kk to escape insert mode.
 " let g:better_escape_shortcut = 'kk'
+
+" Use ctrl-[hjkl] to select the active split!
+nmap <silent> <c-k> :wincmd k<CR>
+nmap <silent> <c-j> :wincmd j<CR>
+nmap <silent> <c-h> :wincmd h<CR>
+nmap <silent> <c-l> :wincmd l<CR>
 
 " Find files using Telescope command-line sugar.
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
