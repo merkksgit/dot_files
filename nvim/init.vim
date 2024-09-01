@@ -14,6 +14,10 @@ set scrolloff=10
 nnoremap <SPACE> <Nop>
 let mapleader=" "
 
+" Switch tabs
+nnoremap <C-Tab> :tabprevious<CR>
+nnoremap <Tab> :tabnext<CR>
+
 " Move lines up and down
 nnoremap <s-j> :m .+1<CR>==
 nnoremap <s-k> :m .-2<CR>==
@@ -21,7 +25,7 @@ vnoremap <s-j> :m '>+1<CR>gv=gv
 vnoremap <s-k> :m '<-2<CR>gv=gv
 
 " use kk to escape insert mode.
-" let g:better_escape_shortcut = 'kk'
+let g:better_escape_shortcut = 'kk'
 
 " Use ctrl-[hjkl] to select the active split!
 nmap <silent> <c-k> :wincmd k<CR>
