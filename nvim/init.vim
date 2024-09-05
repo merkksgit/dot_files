@@ -5,7 +5,7 @@ set number
 " Not case sensitive
 set ignorecase
 " Scroll off
-set scrolloff=10
+set scrolloff=5
 
 " Leader key comma
 " let mapleader = ','
