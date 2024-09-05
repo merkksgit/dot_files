@@ -6,10 +6,8 @@ set number
 set ignorecase
 " Scroll off
 set scrolloff=5
-
 " Leader key comma
 " let mapleader = ','
-
 " Leader key space
 nnoremap <SPACE> <Nop>
 let mapleader=" "
@@ -39,6 +37,7 @@ nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
+
 call plug#begin()
     "Better escape
     Plug 'jdhao/better-escape.vim'
@@ -64,7 +63,7 @@ call plug#begin()
     " Icons
     Plug 'ryanoasis/vim-devicons'
     " Treesitter
-    Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+    " Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
     "fzf
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     " Markdown preview
@@ -77,6 +76,8 @@ call plug#begin()
     Plug 'hachy/cmdpalette.nvim'
     " Starting page
     Plug 'mhinz/vim-startify'
+    " Visual multi
+    Plug 'mg979/vim-visual-multi', {'branch': 'master'}
     call plug#end()
 
 " Floaterm keymappings: floating terminal
@@ -86,7 +87,7 @@ let g:floaterm_keymap_new = '<Leader>tt'
 " let g:floaterm_keymap_next   = '<F9>'
 " let g:floaterm_keymap_toggle = '<F12>'
 
-" Airline Themes (tabs)
+ " Airline Themes (tabs)
 let g:airline_theme='tokyonight'
 " let g:airline_theme='transparent'
 
