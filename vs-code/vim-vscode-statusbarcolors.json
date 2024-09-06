@@ -1,0 +1,30 @@
+{
+    "vim.statusBarColors.insert": [
+        "#FF757F",
+        "#24283B"
+    ],
+    "vim.statusBarColors.commandlineinprogress": [
+        "#C3E88D",
+        "#24283B"
+    ],
+    "vim.statusBarColors.normal": [
+        "#24283B",
+        "#ffffff"
+    ],
+    "vim.statusBarColors.visual": [
+        "#BB9AF7",
+        "#24283B"
+    ],
+    "vim.statusBarColors.visualline": [
+        "#7AA2F7",
+        "#24283B"
+    ],
+    "vim.statusBarColors.visualblock": [
+        "#FF9E64",
+        "#24283B"
+    ],
+    "vim.statusBarColors.searchinprogressmode": [
+        "#545C7E",
+        "#ffffff"
+    ]
+}
