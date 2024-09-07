@@ -87,7 +87,7 @@ let g:floaterm_keymap_new = '<Leader>tt'
 " let g:floaterm_keymap_next   = '<F9>'
 " let g:floaterm_keymap_toggle = '<F12>'
 
- " Airline Themes (tabs)
+" Airline Themes (tabs)
 let g:airline_theme='tokyonight'
 " let g:airline_theme='transparent'
 
