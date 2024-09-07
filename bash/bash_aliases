@@ -9,7 +9,7 @@ alias l='ls -l'
 alias la='ls -a'
 alias lla='ls -la'
 alias lt='ls --tree'
-
+alias ccls='cd && cls'
 # nvim
 alias nv='nvim'
 
