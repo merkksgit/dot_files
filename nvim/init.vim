@@ -1,83 +1,84 @@
-" lua file
-lua require('init')
-" Line numbers
-set number
-" Not case sensitive
-set ignorecase
-" Scroll off
-set scrolloff=5
-" Leader key comma
-" let mapleader = ','
-" Leader key space
-nnoremap <SPACE> <Nop>
-let mapleader=" "
+" finding files
+set path+=**
+set wildmenu
+   " lua file
+   lua require('init')
+   " Line numbers
+   set number
+   " Not case sensitive
+   set ignorecase
+   " Scroll off
+   set scrolloff=5
+   " Leader key comma
+   " let mapleader = ','
+   " Leader key space
+   nnoremap <SPACE> <Nop>
+   let mapleader=" "
 
-" Switch tabs
-nnoremap <C-Tab> :tabprevious<CR>
-nnoremap <Tab> :tabnext<CR>
+   " Switch tabs
+   nnoremap <C-Tab> :tabprevious<CR>
+   nnoremap <Tab> :tabnext<CR>
 
-" Move lines up and down
-nnoremap <s-j> :m .+1<CR>==
-nnoremap <s-k> :m .-2<CR>==
-vnoremap <s-j> :m '>+1<CR>gv=gv
-vnoremap <s-k> :m '<-2<CR>gv=gv
+   " Move lines up and down
+   nnoremap <s-j> :m .+1<CR>==
+   nnoremap <s-k> :m .-2<CR>==
+   vnoremap <s-j> :m '>+1<CR>gv=gv
+   vnoremap <s-k> :m '<-2<CR>gv=gv
 
-" use kk to escape insert mode.
-let g:better_escape_shortcut = 'kk'
+   " use kk to escape insert mode.
+   let g:better_escape_shortcut = 'kk'
 
-" Use ctrl-[hjkl] to select the active split!
-nmap <silent> <c-k> :wincmd k<CR>
-nmap <silent> <c-j> :wincmd j<CR>
-nmap <silent> <c-h> :wincmd h<CR>
-nmap <silent> <c-l> :wincmd l<CR>
+   " Use ctrl-[hjkl] to select the active split!
+   nmap <silent> <c-k> :wincmd k<CR>
+   nmap <silent> <c-j> :wincmd j<CR>
+   nmap <silent> <c-h> :wincmd h<CR>
+   nmap <silent> <c-l> :wincmd l<CR>
 
-" Find files using Telescope command-line sugar.
-nnoremap <leader>ff <cmd>Telescope find_files<cr>
-nnoremap <leader>fg <cmd>Telescope live_grep<cr>
-nnoremap <leader>fb <cmd>Telescope buffers<cr>
-nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+   " Find files using Telescope command-line sugar.
+   nnoremap <leader>ff <cmd>Telescope find_files<cr>
+   nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+   nnoremap <leader>fb <cmd>Telescope buffers<cr>
+   nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
 
-call plug#begin()
+    call plug#begin()
     "Better escape
-    Plug 'jdhao/better-escape.vim'
+     Plug 'jdhao/better-escape.vim'
     " Color Scheme
-    Plug 'navarasu/onedark.nvim'
-    Plug 'ghifarit53/tokyonight-vim'
+     Plug 'ghifarit53/tokyonight-vim'
     " Auto pairs for '{' '[' '('
-    Plug 'jiangmiao/auto-pairs'
+     Plug 'jiangmiao/auto-pairs'
     " Better Suntax Support
-    Plug 'sheerun/vim-polyglot'
+     Plug 'sheerun/vim-polyglot'
     " File Explorer
-    Plug 'scrooloose/NERDTree'
+     Plug 'scrooloose/NERDTree'
     " Comment Stuff Out
-    Plug 'tpope/vim-commentary'
+     Plug 'tpope/vim-commentary'
     " GitHub stuff
-    Plug 'tpope/vim-fugitive'
+     Plug 'tpope/vim-fugitive'
     " Status/Tabline
-    Plug 'vim-airline/vim-airline'
-    Plug 'vim-airline/vim-airline-themes'
+     Plug 'vim-airline/vim-airline'
+     Plug 'vim-airline/vim-airline-themes'
     " Telescope
-    Plug 'nvim-lua/plenary.nvim'
-    Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.6' }
+     Plug 'nvim-lua/plenary.nvim'
+     Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.8' }
     " Icons
-    Plug 'ryanoasis/vim-devicons'
+     Plug 'ryanoasis/vim-devicons'
     " Treesitter
-    " Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+     Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
     "fzf
-    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     " Markdown preview
-    Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+     Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
     " Markdown table of contents
-    Plug 'mzlogin/vim-markdown-toc'
+     Plug 'mzlogin/vim-markdown-toc'
     " terminal in floating window
-    Plug 'voldikss/vim-floaterm'
-    " floating cmdline
-    Plug 'hachy/cmdpalette.nvim'
+     Plug 'voldikss/vim-floaterm'
     " Starting page
-    Plug 'mhinz/vim-startify'
+     Plug 'mhinz/vim-startify'
     " Visual multi
-    Plug 'mg979/vim-visual-multi', {'branch': 'master'}
+     Plug 'mg979/vim-visual-multi', {'branch': 'master'}
+    " LSP
     call plug#end()
 
 " Floaterm keymappings: floating terminal
@@ -87,19 +88,19 @@ let g:floaterm_keymap_new = '<Leader>tt'
 " let g:floaterm_keymap_next   = '<F9>'
 " let g:floaterm_keymap_toggle = '<F12>'
 
-" Airline Themes (tabs)
-let g:airline_theme='tokyonight'
+ " Airline Themes (tabs)
+ let g:airline_theme='tokyonight'
 " let g:airline_theme='transparent'
 
 "  Backround
 set termguicolors
 
-let g:tokyonight_style = 'storm' " available: night, storm
-let g:tokyonight_enable_italic = 1
-colorscheme tokyonight
+ let g:tokyonight_style = 'storm' " available: night, storm
+ let g:tokyonight_enable_italic = 1
+ colorscheme tokyonight
 
 " Automatically displays all buffers when there's only one tab open
-let g:airline#extensions#tabline#enabled = 1
+" let g:airline#extensions#tabline#enabled = 1
 
 " Always show tabs
 set showtabline=2
