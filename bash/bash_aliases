@@ -10,6 +10,15 @@ alias la='ls -a'
 alias lla='ls -la'
 alias lt='ls --tree'
 alias ccls='cd && cls'
+
+# move up 1,2 or 3 directories
+alias ..='cd ../'
+alias ...='cd ../../'
+alias ....='cd ../../../'
+
+# source .bashrc
+alias sob='source ~/.bashrc'
+
 # nvim
 alias nv='nvim'
 
@@ -23,7 +32,7 @@ alias nvf='nvim $(fzf -m --preview="batcat --color=always {}")'
 alias tmuxa='tmux attach'
 
 #fzf with zoxide
-alias ff='cdi'
+alias ff='zi'
 
 # Lazygit
 alias lg='lazygit'
