@@ -11,9 +11,10 @@ return {
       violet = "#BB9AF7",
       yellow = "#FF9E64",
       red = "#FF4A4A",
-      fg = "#c3ccdc",
+      fg = "#545C7e", -- original "#c3ccdc",
       bg = "#24283B",
       inactive_bg = "#24283B",
+      semilightgray = "#545c7e",
     }
 
     local my_lualine_theme = {
@@ -52,9 +53,27 @@ return {
     -- configure lualine with modified theme
     lualine.setup({
       options = {
+        -- Hide lualine for nvimtree (file explorer)
+        disabled_filetypes = {
+          "NvimTree",
+        },
         theme = my_lualine_theme,
+        -- hide separators from right side
+        component_separators = {
+          right = ""
+        }
       },
       sections = {
+        -- show full filepath on statusbar
+        lualine_c = {
+          {
+            "filename",
+            path = 3,
+            symbols = {
+              modified = " ",
+            }
+          }
+        },
         lualine_x = {
           {
             lazy_status.updates,
@@ -62,7 +81,7 @@ return {
             color = { fg = "#FF007C" },
           },
           { "encoding" },
-          { "fileformat" },
+          -- { "fileformat" },
           { "filetype" },
         },
       },
