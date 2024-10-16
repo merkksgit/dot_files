@@ -3,10 +3,9 @@ vim.g.mapleader = " "
 
 local keymap = vim.keymap -- for conciseness
 
----------------------
--- General Keymaps -------------------
+------------------ General Keymaps -------------------
 
--- use jk to exit insert mode
+-- use jj to exit insert mode
 keymap.set("i", "jj", "<ESC>", { desc = "Exit insert mode with jj" })
 
 -- clear search highlights
@@ -31,6 +30,10 @@ keymap.set("n", "<leader>tn", "<cmd>tabn<CR>", { desc = "Go to next tab" }) --  
 keymap.set("n", "<leader>tp", "<cmd>tabp<CR>", { desc = "Go to previous tab" }) --  go to previous tab
 keymap.set("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Open current buffer in new tab" }) --  move current buffer to new tab
 
+-- adjust split sizes
+keymap.set("n", "<C-Left>", ":vertical resize +3<CR>")
+keymap.set("n", "<C-Right>", ":vertical resize -3<CR>")
+
 -- Move lines
-vim.api.nvim_set_keymap('v', 'J', ":m '>+1<CR>gv=gv", { noremap=true })
-vim.api.nvim_set_keymap('v', 'K', ":m '<-2<CR>gv=gv", { noremap=true })
+vim.api.nvim_set_keymap("v", "J", ":m '>+1<CR>gv=gv", { noremap = true })
+vim.api.nvim_set_keymap("v", "K", ":m '<-2<CR>gv=gv", { noremap = true })

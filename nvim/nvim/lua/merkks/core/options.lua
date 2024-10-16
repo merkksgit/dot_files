@@ -7,7 +7,7 @@ local opt = vim.opt -- for conciseness
 opt.relativenumber = true -- show relative line numbers
 opt.number = true -- shows absolute line number on cursor line (when relative number is on)
 -- Scroll of
-opt.scrolloff = 6 -- lines of context
+opt.scrolloff = 8 -- lines of context
 opt.sidescrolloff = 8 -- Colums of context
 
 -- tabs & indentation
@@ -46,3 +46,13 @@ opt.splitbelow = true -- split horizontal window to the bottom
 
 -- turn off swapfile
 opt.swapfile = false
+
+-- highlighted yank
+vim.api.nvim_create_autocmd("TextYankPost", {
+  group = vim.api.nvim_create_augroup("highlight_yank", {}),
+  desc = "Hightlight selection on yank",
+  pattern = "*",
+  callback = function()
+    vim.highlight.on_yank({ higroup = "IncSearch", timeout = 500 })
+  end,
+})
