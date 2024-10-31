@@ -4,7 +4,7 @@ return {
     priority = 1000, -- make sure to load this before all the other start plugins
     config = function()
       local bg = "#24283B"
-      local bg_dark = "#24283B"
+      local bg_dark = "#1F2335"
       local bg_highlight = "#3B4261"
       local bg_search = "#0A64AC"
       local bg_visual = "#275378"
@@ -22,8 +22,8 @@ return {
           colors.bg_highlight = bg_highlight
           colors.bg_popup = bg_dark
           colors.bg_search = bg_search
-          colors.bg_sidebar = bg_dark
-          colors.bg_statusline = bg_dark
+          colors.bg_sidebar = bg
+          colors.bg_statusline = bg
           colors.bg_visual = bg_visual
           colors.border = border
           colors.fg = fg

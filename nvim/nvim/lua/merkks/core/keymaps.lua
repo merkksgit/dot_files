@@ -12,7 +12,7 @@ keymap.set("i", "jj", "<ESC>", { desc = "Exit insert mode with jj" })
 keymap.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
 
 -- delete single character without copying into register
--- keymap.set("n", "x", '"_x')
+keymap.set("n", "x", '"_x')
 
 -- increment/decrement numbers
 keymap.set("n", "<leader>+", "<C-a>", { desc = "Increment number" }) -- increment
@@ -31,9 +31,22 @@ keymap.set("n", "<leader>tp", "<cmd>tabp<CR>", { desc = "Go to previous tab" }) 
 keymap.set("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Open current buffer in new tab" }) --  move current buffer to new tab
 
 -- adjust split sizes
-keymap.set("n", "<C-Left>", ":vertical resize +3<CR>")
-keymap.set("n", "<C-Right>", ":vertical resize -3<CR>")
+keymap.set("n", "<C-Left>", "<cmd>vertical resize +3<CR>", { desc = "Vertical resize" })
+keymap.set("n", "<C-Right>", "<cmd>vertical resize -3<CR>", { desc = "Vertical resize" })
 
 -- Move lines
 vim.api.nvim_set_keymap("v", "J", ":m '>+1<CR>gv=gv", { noremap = true })
 vim.api.nvim_set_keymap("v", "K", ":m '<-2<CR>gv=gv", { noremap = true })
+
+-- Undotree
+vim.keymap.set("n", "<leader><F5>", vim.cmd.UndotreeToggle)
+
+-- Keep cursor middle when C-d or C-u
+vim.keymap.set("n", "<C-d>", "<C-d>zz")
+vim.keymap.set("n", "<C-u>", "<C-u>zz")
+
+-- Change word under cursor
+vim.keymap.set("n", "<leader>ä", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+
+-- Make file executable
+-- vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
