@@ -1,13 +1,13 @@
-#
+# 
 # ███╗   ███╗███████╗██████╗ ██╗  ██╗██╗  ██╗███████╗
 # ████╗ ████║██╔════╝██╔══██╗██║ ██╔╝██║ ██╔╝██╔════╝
 # ██╔████╔██║█████╗  ██████╔╝█████╔╝ █████╔╝ ███████╗
 # ██║╚██╔╝██║██╔══╝  ██╔══██╗██╔═██╗ ██╔═██╗ ╚════██║
 # ██║ ╚═╝ ██║███████╗██║  ██║██║  ██╗██║  ██╗███████║
 # ╚═╝     ╚═╝╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝
+                                                   
 
-
-#	An Irssi theme by merkks
+#	An Irssi theme by merkks  				
 # To use this theme, put it in your Irssi directory and use /set theme merkks2
 
 #############################################################################
@@ -103,11 +103,11 @@ abstracts = {
 
   # $0 = nick mode, $1 = nick
   ownmsgnick = "{msgnick $0 $1-}";
-  ownnick = "%M$*%n";
+  ownnick = "%Y$*%n";
 
   # public message in channel, $0 = nick mode, $1 = nick
   pubmsgnick = "%w{msgnick $0 $1-}";
-  pubnick = "%c$*%n";
+  pubnick = "%m$*%n";
 
   # public message in channel meant for me, $0 = nick mode, $1 = nick
   pubmsgmenick = "{msgnick $0 $1-}";
@@ -236,7 +236,7 @@ abstracts = {
   topicsbstart = "{sbstart $*}";
   topicsbend = "{sbend $*}";
 
-  prompt = "%b[%Y$*%b]";
+  prompt = "%b[%Y$*%b] %Y>> ";
 
   sb = " %b[%m$*%b]%n";
   sbmode = "(%m+%m$*)";
