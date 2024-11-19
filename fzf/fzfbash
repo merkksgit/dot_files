@@ -14,7 +14,7 @@ export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
   --color=prompt:#9d7cd8,spinner:#af5fff,pointer:#9d7cd8,header:#9d7cd8
   --color=border:#24283b,label:#aeaeae,query:#d9d9d9
   --border="rounded" --border-label="" --preview-window="border-rounded" --prompt=": "
-  --marker=">" --pointer=">" --separator="─" --scrollbar="│"
-  --height 60%
+  --marker=">" --pointer=">>" --separator="─" --scrollbar="│"
+  --height 80%
   --layout="reverse" --info="right"'
 
