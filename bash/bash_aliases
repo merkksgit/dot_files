@@ -1,15 +1,18 @@
 #clear screen
 alias cls='clear'
 
-#lsd aliases
-#alias ls='lsd -F -1'
+# twt
+alias chat='twt'
+# lsd aliases
 alias ls='lsd -1'
-
+# alias ls='lsd'
 alias l='ls -l'
-alias la='ls -a'
-alias lla='ls -la'
+# alias lla='ls -la'
 alias lt='ls --tree'
 alias ccls='cd && cls'
+# alias ll='ls -alF'
+alias ll='ls -lha'
+alias la='ls -A'
 
 # move up 1,2 or 3 directories
 alias ..='cd ../'
@@ -30,9 +33,12 @@ alias nvf='nvim $(fzf -m --preview="batcat --color=always {}")'
 
 #tmux
 alias tmuxa='tmux attach'
+alias tma='tmux attach'
+alias tmls='tmux ls'
+alias tmm='tmux new -s main'
 
 #fzf with zoxide
-alias ff='zi'
+alias ff='cdi'
 
 # Lazygit
 alias lg='lazygit'
