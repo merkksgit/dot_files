@@ -20,4 +20,3 @@ require("lazy").setup({ { import = "merkks.plugins" }, { import = "merkks.plugin
     notify = false,
   },
 })
-

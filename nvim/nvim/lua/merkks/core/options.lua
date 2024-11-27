@@ -27,9 +27,6 @@ opt.smartcase = true -- if you include mixed case in your search, assumes you wa
 opt.cursorline = true -- highlight the current cursor line
 
 -- appearance
-
--- turn on termguicolors for nightfly colorscheme to work
--- (have to use iterm2 or any other true color terminal)
 opt.termguicolors = true
 opt.background = "dark" -- colorschemes that can be light or dark will be made dark
 opt.signcolumn = "yes" -- show sign column so that text doesn't shift
@@ -50,9 +47,35 @@ opt.swapfile = false
 -- highlighted yank
 vim.api.nvim_create_autocmd("TextYankPost", {
   group = vim.api.nvim_create_augroup("highlight_yank", {}),
-  desc = "Hightlight selection on yank",
+  desc = "Highlight selection yank",
   pattern = "*",
   callback = function()
     vim.highlight.on_yank({ higroup = "IncSearch", timeout = 500 })
+  end,
+})
+
+-- exit terminal mode using the Escape key
+vim.api.nvim_create_autocmd("TermOpen", {
+  callback = function(args)
+    -- List of terminal programs where we want normal Esc behavior
+    local excluded_programs = {
+      "lazygit",
+      "node",
+      "htop",
+      -- add more programs as needed
+    }
+    -- Get buffer name
+    local bufname = vim.api.nvim_buf_get_name(args.buf)
+    -- Check if buffer name contains any of the excluded programs
+    for _, program in ipairs(excluded_programs) do
+      if bufname:match(program) then
+        return
+      end
+    end
+    vim.keymap.set("t", "<Esc>", [[<C-\><C-n>]], {
+      desc = "Exit terminal mode",
+      buffer = args.buf,
+      silent = true,
+    })
   end,
 })
