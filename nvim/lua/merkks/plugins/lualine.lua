@@ -56,12 +56,13 @@ return {
         -- Hide lualine for nvimtree (file explorer)
         disabled_filetypes = {
           "NvimTree",
+          "alpha",
         },
         theme = my_lualine_theme,
         -- hide separators from right side
         component_separators = {
-          right = ""
-        }
+          right = "",
+        },
       },
       sections = {
         -- show full filepath on statusbar
@@ -71,8 +72,8 @@ return {
             path = 3,
             symbols = {
               modified = " ",
-            }
-          }
+            },
+          },
         },
         lualine_x = {
           {

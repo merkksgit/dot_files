@@ -1,6 +1,9 @@
 -- make Explorer tree like
 vim.cmd("let g:netrw_liststyle = 3")
 
+-- focus undotree when openend
+vim.cmd("let g:undotree_SetFocusWhenToggle = 1")
+
 local opt = vim.opt -- for conciseness
 
 -- line numbers
