@@ -15,7 +15,7 @@ This repository contains my personal configuration files (dotfiles) for various 
 ```
 
 ```
-.config/gtk-3.0
+~/.config/gtk-3.0
 ```
 
 ### fzf
@@ -50,4 +50,10 @@ This repository contains my personal configuration files (dotfiles) for various 
 
 ```
 ~/.tmux.conf
+```
+
+### lazygit
+
+```
+~/.config/lazygit/config.yml
 ```
