@@ -14,6 +14,10 @@ This repository contains my personal configuration files (dotfiles) for various 
 ~/.bashrc
 ```
 
+```
+.config/gtk-3.0
+```
+
 ### fzf
 
 ```
@@ -39,11 +43,7 @@ This repository contains my personal configuration files (dotfiles) for various 
 ### nvim
 
 ```
-~/.config/nvim/init.vim
-```
-
-```
-~/.config/nvim/lua
+~/.config/nvim/
 ```
 
 ### tmux
@@ -51,4 +51,3 @@ This repository contains my personal configuration files (dotfiles) for various 
 ```
 ~/.tmux.conf
 ```
-
