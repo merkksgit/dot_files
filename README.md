@@ -15,7 +15,7 @@ This repository contains my personal configuration files (dotfiles) for various 
 ```
 
 ```
-~/.config/gtk-3.0
+~/.config/gtk-3.0/gtk.css
 ```
 
 ### fzf
@@ -56,4 +56,10 @@ This repository contains my personal configuration files (dotfiles) for various 
 
 ```
 ~/.config/lazygit/config.yml
+```
+
+### twt
+
+```
+~/.config/twt/config.toml
 ```
