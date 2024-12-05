@@ -53,3 +53,6 @@ vim.keymap.set("n", "<leader>ö", "<cmd>!chmod +x %<CR>", { silent = true })
 -- Keep cursor middle when C-d or C-u
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
+
+-- delete word under cursor and enter insert mode
+vim.keymap.set("n", "<C-c>", "ciw")
