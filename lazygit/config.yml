@@ -130,7 +130,7 @@ gui:
   showFileTree: true
 
   # If true, show a random tip in the command log when Lazygit starts
-  showRandomTip: true
+  showRandomTip: false
 
   # If true, show the command log
   showCommandLog: true
@@ -198,11 +198,23 @@ gui:
   # Config relating to the spinner.
   spinner:
     # The frames of the spinner animation.
+    # frames:
+    #   - "|"
+    #   - /
+    #   - "-"
+    #   - \
+
     frames:
-      - "|"
-      - /
-      - "-"
-      - \
+      - ⠋
+      - ⠙
+      - ⠹
+      - ⠸
+      - ⠼
+      - ⠴
+      - ⠦
+      - ⠧
+      - ⠇
+      - ⠏
 
     # The "speed" of the spinner in milliseconds.
     rate: 50
