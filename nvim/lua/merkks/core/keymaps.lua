@@ -56,3 +56,6 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz")
 
 -- delete word under cursor and enter insert mode
 vim.keymap.set("n", "<C-c>", "ciw")
+
+-- toggle word wrap
+keymap.set("n", "<F10>", "<cmd>set wrap! linebreak! nolist!<CR>", { desc = "Toggle word wrap settings" })
