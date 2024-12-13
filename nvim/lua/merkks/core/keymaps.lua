@@ -59,3 +59,7 @@ vim.keymap.set("n", "<C-c>", "ciw")
 
 -- toggle word wrap
 keymap.set("n", "<F10>", "<cmd>set wrap! linebreak! nolist!<CR>", { desc = "Toggle word wrap settings" })
+
+-- New line (without entering insert mode)
+keymap.set("n", "<leader>o", "o<ESC>j")
+keymap.set("n", "<leader>O", "O<ESC>k")
