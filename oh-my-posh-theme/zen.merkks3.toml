@@ -44,7 +44,7 @@ alignment = 'left'
     [blocks.segments.properties]
       # branch_icon = ' '
       branch_icon = 'git:'
-      commit_icon = ' '
+      commit_icon = '@'
       fetch_status = true
 
 [[blocks]]
