@@ -11,6 +11,9 @@ return {
             style = "single",
           },
         },
+        format = {
+          cmdline = { pattern = "^:", icon = ":", lang = "vim" },
+        },
       },
       lsp = {
         override = {
