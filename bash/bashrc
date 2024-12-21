@@ -126,7 +126,6 @@ eval "$(oh-my-posh init bash --config ~/oh-my-posh-themes/zen.merkks.toml)"
 # Bash Vi Editing Mode
 set -o vi
 
-
 # FZF
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
