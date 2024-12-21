@@ -128,6 +128,8 @@ keymap = [
 	{ on = [ "g", "c" ],       run = "cd ~/.config",     desc = "Goto ~/.config" },
 	{ on = [ "g", "d" ],       run = "cd ~/Downloads",   desc = "Goto ~/Downloads" },
 	{ on = [ "g", "<Space>" ], run = "cd --interactive", desc = "Jump interactively" },
+  { on = [ "g", "f" ],       run = "cd ~/github_repositories/dot_files/", desc = "Goto dotfiles" },
+  { on = [ "g", "k" ],       run = "cd ~/Koulu/", desc = "Goto Koulu" },
 
 	# Tabs
 	{ on = "t", run = "tab_create --current", desc = "Create a new tab with CWD" },
