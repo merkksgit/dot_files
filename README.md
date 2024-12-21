@@ -67,3 +67,9 @@ This repository contains my personal configuration files (dotfiles) for various 
 ```
 ~/.config/twt/config.toml
 ```
+
+### Yazi
+
+```
+~/.config/yazi/
+```
