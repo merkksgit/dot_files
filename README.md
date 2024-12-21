@@ -18,6 +18,10 @@ This repository contains my personal configuration files (dotfiles) for various 
 ~/.config/gtk-3.0/gtk.css
 ```
 
+```
+~/.inputrc
+```
+
 ### fzf
 
 ```
