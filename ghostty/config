@@ -1,0 +1,16 @@
+# General Settings
+theme = tokyonight-storm
+font-family = "JetBrainsMonoNL Nerd Font"
+font-size = 13
+window-padding-x = 6
+window-padding-y = 6
+window-theme = "ghostty"
+window-decoration = false
+# window-height = 35
+# window-width = 135
+resize-overlay = never
+
+# Keybinds
+keybind = ctrl+ä=toggle_window_decorations
+keybind = super+q=quit
+
