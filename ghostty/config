@@ -1,21 +1,39 @@
 # General Settings
-theme = tokyonight-storm
+# theme = tokyonight-storm
 font-family = "JetBrainsMonoNL Nerd Font"
 font-size = 13
-window-padding-x = 6
-window-padding-y = 6
+window-padding-x = 9
+window-padding-y = 9
 window-theme = "ghostty"
 window-decoration = false
-# window-height = 35
-# window-width = 135
-resize-overlay = never mouse-hide-while-typing = true
-# A value of 1 is fully opaque and a value of 0 is fully transparent.
-# background-opacity = 0.9
-# A positive value enables blurring of the background when background-opacity is less than 1. The value is the blur radius to apply. A value of 20 is reasonable for a good looking blur. 
-# background-blur-radius = 5
+resize-overlay = never
+mouse-hide-while-typing = true
 
 # Keybinds
 keybind = ctrl+ä=toggle_window_decorations
 keybind = super+q=quit
 keybind = super+r=reload_config
+
+# Theme
+palette = 0=#1d202f
+palette = 1=#f7768e
+palette = 2=#9ece6a
+palette = 3=#e0af68
+palette = 4=#7aa2f7
+palette = 5=#bb9af7
+palette = 6=#7dcfff
+palette = 7=#a9b1d6
+palette = 8=#414868
+palette = 9=#f7768e
+palette = 10=#9ece6a
+palette = 11=#e0af68
+palette = 12=#7aa2f7
+palette = 13=#bb9af7
+palette = 14=#7dcfff
+palette = 15=#ffffff
+background = 24283b
+foreground = ffffff
+cursor-color = ffffff
+selection-background = 364a82
+selection-foreground = c0caf5
 
