@@ -14,6 +14,7 @@ keybind = ctrl+ä=toggle_window_decorations
 keybind = super+q=quit
 keybind = super+r=reload_config
 
+# Unbind
 keybind = alt+one=unbind
 keybind = alt+two=unbind
 keybind = alt+three=unbind
