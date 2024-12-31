@@ -14,6 +14,16 @@ keybind = ctrl+ä=toggle_window_decorations
 keybind = super+q=quit
 keybind = super+r=reload_config
 
+keybind = alt+one=unbind
+keybind = alt+two=unbind
+keybind = alt+three=unbind
+keybind = alt+four=unbind
+keybind = alt+five=unbind
+keybind = alt+six=unbind
+keybind = alt+seven=unbind
+keybind = alt+eight=unbind
+keybind = alt+nine=unbind
+
 # Theme
 palette = 0=#1d202f
 palette = 1=#f7768e
