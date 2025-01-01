@@ -1,0 +1,22 @@
+/* Canvas width */
+
+body {
+    --file-line-width:850px;
+    }
+
+/* Line highlight*/
+
+/*for legacy editor*/
+.CodeMirror-activeline.CodeMirror-linebackground{
+    background-color: #3b4261;
+  }
+  
+  /*for live preview mode*/
+  .cm-active.cm-line{
+    background-color: #3b4261;
+  }
+  
+  /*for live preview mode code block*/
+  div.cm-active.HyperMD-codeblock.HyperMD-codeblock-bg.cm-line{
+    background-color: #3b4261;
+  }
