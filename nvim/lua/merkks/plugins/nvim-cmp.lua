@@ -17,18 +17,25 @@ return {
   },
   config = function()
     local cmp = require("cmp")
-
     local luasnip = require("luasnip")
-
     local lspkind = require("lspkind")
-
     -- loads vscode style snippets from installed plugins (e.g. friendly-snippets)
     require("luasnip.loaders.from_vscode").lazy_load()
 
+    -- Set highlight group for completion window
+    vim.api.nvim_set_hl(0, "CmpNormal", { bg = "#282828" }) -- Customize the background color here
+    vim.api.nvim_set_hl(0, "MyBorderColor", { fg = "#bb9af7" }) -- Border color
+
     cmp.setup({
       window = {
-        completion = cmp.config.window.bordered(),
-        documentation = cmp.config.window.bordered(),
+        completion = {
+          border = "single",
+          winhighlight = "Normal:CmpNormal,CursorLine:PmenuSel",
+        },
+        documentation = {
+          border = "none",
+          winhighlight = "Normal:CmpNormal,CursorLine:PmenuSel",
+        },
       },
       completion = {
         completeopt = "menu,menuone,preview,noselect",
@@ -54,7 +61,6 @@ return {
         { name = "buffer" }, -- text within current buffer
         { name = "path" }, -- file system paths
       }),
-
       -- configure lspkind for vs-code like pictograms in completion menu
       formatting = {
         format = lspkind.cmp_format({
