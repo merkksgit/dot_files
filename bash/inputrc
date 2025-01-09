@@ -8,3 +8,7 @@ set vi-ins-mode-string ""
 # Reduce delay after pressing ESC
 set keyseq-timeout 50
 
+# in Python3
+$if Python
+set show-mode-in-prompt off
+$endif
