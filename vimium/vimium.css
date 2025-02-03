@@ -56,6 +56,7 @@ div.vimiumHUD .vimiumHUDSearchAreaInner {
   transform: translateX(-50%);
   border-radius: 4px;
   overflow: hidden;
+  border: 1px solid #24283b;
 }
 
 #vomnibar input {
