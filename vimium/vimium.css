@@ -70,6 +70,11 @@ div.vimiumHUD .vimiumHUDSearchAreaInner {
   width: 100%;
   outline: none;
   box-sizing: border-box;
+  border: 0;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  appearance: none;
 }
 
 #vomnibar .vomnibarSearchArea {
