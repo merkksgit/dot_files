@@ -18,7 +18,7 @@ div > .vimiumHintMarker span {
 
 /* Link hint matching characters */
 div > .vimiumHintMarker > .matchingCharacter {
-  color: #bb9af7;
+  color: #ff9e64;
 }
 
 /* HUD ("heads-up display") bar */
