@@ -1,69 +1,73 @@
-Toggle left sidebar = Alt + l
-Toggle right sidebar = Alt + r
-Focus on last note = Alt + f
-Templates: Insert template = Ctrl + t
-Move line up = Ctrl + k
-Move line down = Ctrl + j
-Toggle spellcheck = Alt + c
-
 {
   "insert-template": [
     {
-      "modifiers": [
-        "Mod"
-      ],
+      "modifiers": ["Mod"],
       "key": "T"
     }
   ],
   "workspace:new-tab": [],
-  "app:toggle-left-sidebar": [
-    {
-      "modifiers": [
-        "Alt"
-      ],
-      "key": "L"
-    }
-  ],
-  "app:toggle-right-sidebar": [
-    {
-      "modifiers": [
-        "Alt"
-      ],
-      "key": "R"
-    }
-  ],
   "editor:focus": [
     {
-      "modifiers": [
-        "Alt"
-      ],
+      "modifiers": ["Alt"],
       "key": "F"
     }
   ],
   "editor:swap-line-up": [
     {
-      "modifiers": [
-        "Mod"
-      ],
+      "modifiers": ["Mod"],
       "key": "K"
     }
   ],
   "editor:insert-link": [],
   "editor:swap-line-down": [
     {
-      "modifiers": [
-        "Mod"
-      ],
+      "modifiers": ["Mod"],
       "key": "J"
     }
   ],
   "editor:toggle-spellcheck": [
     {
-      "modifiers": [
-        "Alt"
-      ],
+      "modifiers": ["Alt"],
       "key": "C"
+    }
+  ],
+  "markdown:toggle-preview": [
+    {
+      "modifiers": ["Alt"],
+      "key": "R"
+    }
+  ],
+  "quick-explorer:browse-vault": [
+    {
+      "modifiers": ["Alt"],
+      "key": "P"
+    }
+  ],
+  "quick-explorer:browse-current": [
+    {
+      "modifiers": ["Alt"],
+      "key": "O"
+    }
+  ],
+  "vimium:show-markers": [
+    {
+      "modifiers": ["Mod"],
+      "key": "F"
+    }
+  ],
+  "editor:open-search": [],
+  "editor:toggle-checklist-status": [],
+  "editor:open-search-replace": [],
+  "app:toggle-left-sidebar": [
+    {
+      "modifiers": ["Mod"],
+      "key": "H"
+    }
+  ],
+  "app:toggle-right-sidebar": [
+    {
+      "modifiers": ["Mod"],
+      "key": "L"
     }
   ]
 }
-
