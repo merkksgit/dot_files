@@ -31,6 +31,9 @@ alias cc='code $(fzf -m --preview="batcat --color=always {}")'
 # fzf preview -> open with nvim
 alias nvf='nvim $(fzf -m --preview="batcat --color=always {}")'
 
+# date
+alias date='date "+%a %d/%m/%Y %H:%M:%S"'
+
 #tmux
 alias tmuxa='tmux attach'
 alias tma='tmux attach'
