@@ -47,8 +47,9 @@ vim.keymap.set("n", "<leader><F5>", vim.cmd.UndotreeToggle, { desc = "Undotree" 
 -- Change word under cursor
 vim.keymap.set("n", "<leader>ä", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], { desc = "Word Replacer" })
 
--- Make file executable
-vim.keymap.set("n", "<leader>ö", "<cmd>!chmod +x %<CR>", { silent = true })
+-- Make file executable and remove executable
+vim.keymap.set("n", "<leader>ö", "<cmd>!chmod +x %<CR>", { silent = true, desc = "Make executable" })
+vim.keymap.set("n", "<leader>Ö", "<cmd>!chmod -x %<CR>", { silent = true, desc = "Remove executable" })
 
 -- Keep cursor middle when C-d or C-u
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
