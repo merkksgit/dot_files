@@ -49,3 +49,13 @@ alias lg='lazygit'
 # xsel
 alias pbcopy='xsel --input --clipboard'
 alias pbpaste='xsel --output --clipboard'
+
+# Todo-cli
+alias todol="todo list"
+alias todod="todo done"
+alias todou="todo undo"
+alias todor="todo remove"
+alias todoe="todo edit"
+alias todoc="todo clear"
+alias todoh="todo help"
+
