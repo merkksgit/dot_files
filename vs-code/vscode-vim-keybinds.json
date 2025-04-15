@@ -1,330 +1,390 @@
-
-// Place your key bindings in this file to override the defaults
 [
-    {
-        "key": "ctrl+'",
-        "command": "editor.action.commentLine",
-        "when": "editorTextFocus && !editorReadonly"
-    },
-    {
-        "key": "ctrl+shift+7",
-        "command": "-editor.action.commentLine",
-        "when": "editorTextFocus && !editorReadonly"
-    },
-    {
-        "key": "alt+[Semicolon]",
-        "command": "python.execInTerminal-icon"
-    },
-    {
-        "key": "ctrl+shift+[Equal]",
-        "command": "-workbench.action.terminal.toggleTerminal",
-        "when": "terminal.active"
-    },
-    {
-        "key": "f11",
-        "command": "workbench.action.toggleFullScreen",
-        "when": "!isIOS"
-    },
-    {
-        "key": "f11",
-        "command": "-workbench.action.toggleFullScreen",
-        "when": "!isIOS"
-    },
-
-
-    {
+  {
+    // Executes the current Python file in the terminal
+    "key": "alt+[Semicolon]",
+    "command": "python.execInTerminal-icon"
+  },
+  {
+    // Disables the default key binding for toggling the terminal when it's active
+    "key": "ctrl+shift+[Equal]",
+    "command": "-workbench.action.terminal.toggleTerminal",
+    "when": "terminal.active"
+  },
+  {
+    // Toggles full screen mode (except on iOS devices)
+    "key": "f11",
+    "command": "workbench.action.toggleFullScreen",
+    "when": "!isIOS"
+  },
+  {
+    "key": "f11",
+    "command": "-workbench.action.toggleFullScreen",
+    "when": "!isIOS"
+  },
+  {
+    // Navigates to the editor group on the left (Vim-style navigation)
     "key": "ctrl-h",
     "command": "workbench.action.navigateLeft"
-    },
-    {
+  },
+  {
+    // Navigates to the editor group on the right (Vim-style navigation)
     "key": "ctrl-l",
     "command": "workbench.action.navigateRight"
-    },
-    {
+  },
+  {
+    // Navigates to the editor group above (Vim-style navigation)
     "key": "ctrl-k",
     "command": "workbench.action.navigateUp"
-    },
-    {
+  },
+  {
+    // Navigates to the editor group below (Vim-style navigation)
     "key": "ctrl-j",
     "command": "workbench.action.navigateDown"
-    },
-    {
+  },
+  {
+    // Shows all open editors in a quick pick menu (leader key , command)
     "key": "space ,",
     "command": "workbench.action.showAllEditors",
     "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
-    },
-    {
+  },
+  {
+    // Opens the file explorer sidebar when in the editor
     "key": "space e",
     "command": "runCommands",
     "args": {
-        "commands": [
+      "commands": [
         "workbench.action.toggleSidebarVisibility",
         "workbench.files.action.focusFilesExplorer"
-        ]
+      ]
     },
     "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus) && !sideBarFocus"
-    },
-    {
+  },
+  {
+    // Closes the sidebar and focuses back on the editor when in the sidebar
     "key": "space e",
     "command": "runCommands",
     "args": {
-        "commands": [
+      "commands": [
         "workbench.action.toggleSidebarVisibility",
         "workbench.action.focusActiveEditorGroup"
-        ]
+      ]
     },
     "when": "sideBarFocus && !inputFocus"
-    },
-    {
+  },
+  {
+    // Toggles the sidebar visibility when in normal mode
     "key": "space e",
     "when": "vim.mode == 'Normal' && editorTextFocus && foldersViewVisible",
     "command": "workbench.action.toggleSidebarVisibility"
-    },
-    {
-    "key": "tab",
+  },
+  {
+    // Navigates to the next editor/tab in the current group
+    "key": "space t n",
     "command": "workbench.action.nextEditorInGroup",
     "when": "(vim.mode == 'Normal' || vim.mode == 'Visual') && (editorTextFocus || !inputFocus)"
-    },
-    {
-    "key": "shift-tab",
+  },
+  {
+    // Navigates to the previous editor/tab in the current group
+    "key": "space t p",
     "command": "workbench.action.previousEditorInGroup",
     "when": "(vim.mode == 'Normal' || vim.mode == 'Visual') && (editorTextFocus || !inputFocus)"
-    },
-
-    {
+  },
+  {
+    // Moves selected lines down when in visual line mode
     "key": "shift-j",
     "command": "editor.action.moveLinesDownAction",
     "when": "vim.mode == 'VisualLine' && editorTextFocus"
-    },
-    {
+  },
+  {
+    // Moves selected lines up when in visual line mode
     "key": "shift-k",
     "command": "editor.action.moveLinesUpAction",
     "when": "vim.mode == 'VisualLine' && editorTextFocus"
-    },
-    {
+  },
+  {
+    // Shows hover information (like documentation) in normal mode
     "key": "shift-k",
     "command": "editor.action.showHover",
     "when": "vim.mode == 'Normal' && editorTextFocus"
-    },
-    {
+  },
+  {
+    // Opens the code action menu (e.g., for fixes and refactorings)
     "key": "space c a",
     "command": "editor.action.codeAction",
     "when": "vim.mode == 'Normal' && editorTextFocus"
-    },
-    {
+  },
+  {
+    // Triggers rename symbol functionality
     "key": "space c r",
     "command": "editor.action.rename",
     "when": "vim.mode == 'Normal' && editorTextFocus"
-    },
-    {
+  },
+  {
+    // Opens the go to symbol in file menu
     "key": "space c s",
     "command": "workbench.action.gotoSymbol",
     "when": "vim.mode == 'Normal' && editorTextFocus"
-    },
-    {
-    "key": "space b d",
+  },
+  {
+    // Closes the current editor/buffer
+    "key": "space s x",
     "command": "workbench.action.closeActiveEditor",
     "when": "vim.mode == 'Normal' && editorTextFocus"
-    },
-    {
+  },
+  {
+    // Opens the quick open / go to file menu
     "key": "space space",
     "command": "workbench.action.quickOpen",
     "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
-    },
-    {
+  },
+  {
+    // Goes to the definition of the symbol under cursor
     "key": "space g d",
     "command": "editor.action.revealDefinition",
     "when": "vim.mode == 'Normal' && editorTextFocus"
-    },
-    {
+  },
+  {
+    // Shows all references to the symbol under cursor
     "key": "space g r",
     "command": "editor.action.goToReferences",
     "when": "vim.mode == 'Normal' && editorTextFocus"
-    },
-    {
+  },
+  {
+    // Opens the search across all files panel
     "key": "space s g",
     "command": "workbench.action.findInFiles",
     "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
-    },
-    {
+  },
+  {
+    // Opens and focuses the Source Control panel (git)
     "key": "space g g",
     "command": "runCommands",
     "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)",
     "args": {
-        "commands": ["workbench.view.scm", "workbench.scm.focus"]
+      "commands": ["workbench.view.scm", "workbench.scm.focus"]
     }
-    },
-    {
+  },
+  {
+    // Adds a selection to the next occurrence of the current selection (multi-cursor)
     "key": "ctrl-n",
     "command": "editor.action.addSelectionToNextFindMatch",
     "when": "(vim.mode == 'Normal' || vim.mode == 'Visual') && (editorTextFocus || !inputFocus)"
-    },
-
-    {
+  },
+  {
+    // Renames the selected file in the explorer
     "key": "r",
     "command": "renameFile",
     "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
-    },
-    {
+  },
+  {
+    // Copies the selected file in the explorer
     "key": "c",
     "command": "filesExplorer.copy",
     "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
-    },
-    {
+  },
+  {
+    // Pastes a previously copied file in the explorer
     "key": "p",
     "command": "filesExplorer.paste",
     "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
-    },
-    {
+  },
+  {
+    // Cuts the selected file in the explorer
     "key": "x",
     "command": "filesExplorer.cut",
     "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
-    },
-    {
+  },
+  {
+    // Deletes the selected file in the explorer
     "key": "d",
     "command": "deleteFile",
     "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
-    },
-    {
+  },
+  {
+    // Creates a new file in the explorer
     "key": "a",
     "command": "explorer.newFile",
     "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
-    },
-    {
+  },
+  {
+    // Creates a new folder in the explorer
     "key": "shift-a",
     "command": "explorer.newFolder",
     "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
-    },
-    {
-    "key": "s",
+  },
+  {
+    // Opens the selected file to the side in the explorer
+    "key": "ctrl-v",
     "command": "explorer.openToSide",
     "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
-    },
-    {
+  },
+  {
+    // Opens the selected file in a horizontal split and closes other editors
     "key": "shift-s",
     "command": "runCommands",
     "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus",
     "args": {
-        "commands": [
+      "commands": [
         "workbench.action.splitEditorDown",
         "explorer.openAndPassFocus",
         "workbench.action.closeOtherEditors"
-        ]
+      ]
     }
-    },
-    {
+  },
+  {
+    // Opens the selected file in the explorer and focuses the editor
     "key": "enter",
     "command": "explorer.openAndPassFocus",
     "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceIsFolder && !inputFocus"
-    },
-    {
+  },
+  {
+    // Expands/collapses folders in the explorer
     "key": "enter",
     "command": "list.toggleExpand",
     "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && explorerResourceIsFolder && !inputFocus"
-    },
-    {
-        "key": "ctrl+shift+oem_7",
-        "command": "workbench.action.terminal.new",
-        "when": "terminalProcessSupported || terminalWebExtensionContributedProfile"
-    },
-    {
-        "key": "ctrl+shift+oem_3",
-        "command": "-workbench.action.terminal.new",
-        "when": "terminalProcessSupported || terminalWebExtensionContributedProfile"
-    },
-    {
-        "key": "ctrl+oem_3",
-        "command": "-workbench.action.terminal.toggleTerminal",
-        "when": "terminal.active"
-    },
-    {
-        "key": "ctrl+oem_3",
-        "command": "python.execInTerminal-icon"
-    },
-    {
-        "key": "ctrl+o",
-        "command": "-workbench.action.files.openFile",
-        "when": "true"
-    },
-    {
-        "key": "ctrl+k o",
-        "command": "workbench.action.files.openFolder",
-        "when": "openFolderWorkspaceSupport"
-    },
-    {
-        "key": "ctrl+k ctrl+o",
-        "command": "-workbench.action.files.openFolder",
-        "when": "openFolderWorkspaceSupport"
-    },
-    {
-        "key": "ctrl+shift+[Quote]",
-        "command": "workbench.view.explorer",
-        "when": "viewContainer.workbench.view.explorer.enabled"
-    },
-    {
-        "key": "ctrl+shift+e",
-        "command": "-workbench.view.explorer",
-        "when": "viewContainer.workbench.view.explorer.enabled"
-    },
-    {
-        "key": "ctrl+o",
-        "command": "workbench.action.files.openFile"
-    },
-    {
-        "key": "ctrl+[Quote]",
-        "command": "workbench.action.terminal.toggleTerminal"
-    },
-        // Down Motion
-    {
-        "key": "ctrl+j",
-        "command": "cursorDown",
-        "when": "textInputFocus"
-    },
-    {
-        "key": "ctrl+j",
-        "command": "showNextParameterHint",
-        "when": "editorFocus && parameterHintsMultipleSignatures && parameterHintsVisible"
-    },
-    {
-        "key": "ctrl+j",
-        "command": "selectNextSuggestion",
-        "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
-    },
-    {
-        "key": "ctrl+j",
-        "command": "list.focusDown",
-        "when": "listFocus && !inputFocus"
-    },
-    {
-        "key": "ctrl+j",
-        "command": "workbench.action.quickOpenSelectNext",
-        "when": "inQuickOpen"
-    },
-    
-    // Up Motion
-    {
-        "key": "ctrl+k",
-        "command": "cursorUp",
-        "when": "textInputFocus"
-    },
-    {
-        "key": "ctrl+k",
-        "command": "showPrevParameterHint",
-        "when": "editorFocus && parameterHintsMultipleSignatures && parameterHintsVisible"
-    },
-    {
-        "key": "ctrl+k",
-        "command": "selectPrevSuggestion",
-        "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
-    },
-    {
-        "key": "ctrl+k",
-        "command": "list.focusUp",
-        "when": "listFocus && !inputFocus"
-    },
-    {
-        "key": "ctrl+k",
-        "command": "workbench.action.quickOpenSelectPrevious",
-        "when": "inQuickOpen"
-    } 
-        ]
+  },
+  {
+    // Creates a new terminal (ctrl+shift+')
+    "key": "ctrl+shift+oem_7",
+    "command": "workbench.action.terminal.new",
+    "when": "terminalProcessSupported || terminalWebExtensionContributedProfile"
+  },
+  {
+    "key": "ctrl+shift+oem_3",
+    "command": "-workbench.action.terminal.new",
+    "when": "terminalProcessSupported || terminalWebExtensionContributedProfile"
+  },
+  {
+    "key": "ctrl+oem_3",
+    "command": "-workbench.action.terminal.toggleTerminal",
+    "when": "terminal.active"
+  },
+  {
+    // Executes the current Python file in the terminal (ctrl+`)
+    "key": "ctrl+oem_3",
+    "command": "python.execInTerminal-icon"
+  },
+  {
+    // Open a file
+    "key": "ctrl+o",
+    "command": "-workbench.action.files.openFile",
+    "when": "true"
+  },
+  {
+    "key": "ctrl+o",
+    "command": "workbench.action.files.openFile"
+  },
+  {
+    // Opens a folder (two-key chord)
+    "key": "ctrl+k o",
+    "command": "workbench.action.files.openFolder",
+    "when": "openFolderWorkspaceSupport"
+  },
+  {
+    "key": "ctrl+k ctrl+o",
+    "command": "-workbench.action.files.openFolder",
+    "when": "openFolderWorkspaceSupport"
+  },
+  {
+    "key": "ctrl+shift+[Quote]",
+    "command": "workbench.view.explorer",
+    "when": "viewContainer.workbench.view.explorer.enabled"
+  },
+  {
+    "key": "ctrl+shift+e",
+    "command": "-workbench.view.explorer",
+    "when": "viewContainer.workbench.view.explorer.enabled"
+  },
+  {
+    // Toggles the terminal visibility (ctrl+ä)
+    "key": "ctrl+[Quote]",
+    "command": "workbench.action.terminal.toggleTerminal"
+  },
+  // Down Motion
+  {
+    // Moves the cursor down in text inputs
+    "key": "ctrl+j",
+    "command": "cursorDown",
+    "when": "textInputFocus"
+  },
+  {
+    // Shows the next parameter hint when multiple are available
+    "key": "ctrl+j",
+    "command": "showNextParameterHint",
+    "when": "editorFocus && parameterHintsMultipleSignatures && parameterHintsVisible"
+  },
+  {
+    // Selects the next suggestion in the autocomplete dropdown
+    "key": "ctrl+j",
+    "command": "selectNextSuggestion",
+    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+  },
+  {
+    // Moves focus down in lists (like the explorer)
+    "key": "ctrl+j",
+    "command": "list.focusDown",
+    "when": "listFocus && !inputFocus"
+  },
+  {
+    // Selects the next item in the quick open menu
+    "key": "ctrl+j",
+    "command": "workbench.action.quickOpenSelectNext",
+    "when": "inQuickOpen"
+  },
+  // Up Motion
+  {
+    // Moves the cursor up in text inputs
+    "key": "ctrl+k",
+    "command": "cursorUp",
+    "when": "textInputFocus"
+  },
+  {
+    // Shows the previous parameter hint when multiple are available
+    "key": "ctrl+k",
+    "command": "showPrevParameterHint",
+    "when": "editorFocus && parameterHintsMultipleSignatures && parameterHintsVisible"
+  },
+  {
+    // Selects the previous suggestion in the autocomplete dropdown
+    "key": "ctrl+k",
+    "command": "selectPrevSuggestion",
+    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+  },
+  {
+    // Moves focus up in lists (like the explorer)
+    "key": "ctrl+k",
+    "command": "list.focusUp",
+    "when": "listFocus && !inputFocus"
+  },
+  {
+    // Selects the previous item in the quick open menu
+    "key": "ctrl+k",
+    "command": "workbench.action.quickOpenSelectPrevious",
+    "when": "inQuickOpen"
+  },
+  {
+    // Jumps to the matching bracket (like Vim's % command)
+    "key": "space shift+5",
+    "command": "editor.action.jumpToBracket",
+    "when": "vim.mode == 'Normal' && editorTextFocus"
+  },
+  {
+    // Toggle Zen mode
+    "key": "space z z",
+    "command": "workbench.action.toggleZenMode",
+    "when": "vim.mode == 'Normal' && editorTextFocus"
+  },
+  {
+    // Open problems panel
+    "key": "space x d",
+    "command": "workbench.actions.view.problems",
+    "when": "vim.mode == 'Normal' && editorTextFocus"
+  },
+  // Close folder
+  {
+    "key": "space s f",
+    "command": "workbench.action.closeFolder",
+    "when": "vim.mode == 'Normal' && editorTextFocus"
+  }
+]
+

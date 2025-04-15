@@ -1,82 +1,74 @@
 {
-    "terminal.integrated.fontSize": 18,
-    "terminal.integrated.fontFamily": "JetBrainsmono Nerd Font ",
-    "editor.fontSize": 18,
-    "editor.fontFamily": "JetBrainsmono Nerd Font",
-    "workbench.startupEditor": "none",
-    "workbench.colorTheme": "Tokyo Night Storm",
-    "code-runner.runInTerminal": true,
-    "workbench.iconTheme": "material-icon-theme",
-    "git.openRepositoryInParentFolders": "always",
-    "indentRainbow.colors": [
-        "rgb(122, 162, 247,0.08)",
-        "rgba(125, 207, 255,0.08)",
-        "rgba(192, 202, 245,0.08)",
-        "rgba(180, 249, 248,0.08)"
-    ],
-    "editor.minimap.enabled": false,
-    "extensions.experimental.affinity": {
-        "asvetliakov.vscode-neovim": 1
-    },
-    "vscode-neovim.useWSL": true,
-    "vscode-neovim.neovimExecutablePaths.linux": "/opt/nvim-linux64/bin/nvim",
-    "editor.lineNumbers": "relative",
-    "editor.cursorSurroundingLines": 5,
-    "workbench.colorCustomizations": {
-        "editor.findMatchBackground": "#7dcfff50",
-        "editor.findMatchHighlightBackground": "#bb9af750",
-        "editor.selectionBackground": "#7dcfff50",
-        "editor.selectionHighlightBackground": "#bb9af750",
-        "statusBar.background": "#7AA2F7",
-        "statusBar.noFolderBackground": "#7AA2F7",
-        "statusBar.debuggingBackground": "#7AA2F7",
-        "statusBar.foreground": "#24283B",
-        "statusBar.debuggingForeground": "#24283B",
-        "editor.linkedEditingBackground": "#ff0000",
-        "editor.wordHighlightBackground": "#7aa2f783"
-    },
-    "vim.statusBarColors.easymotioninputmode": "",
-    "vim.statusBarColorControl": true,
-    "vim.statusBarColors.insert": [
-        "#FF757F",
-        "#24283B"
-    ],
-    "vim.statusBarColors.commandlineinprogress": [
-        "#C3E88D",
-        "#24283B"
-    ],
-    "vim.statusBarColors.normal": [
-        "#24283B",
-        "#ffffff"
-    ],
-    "vim.statusBarColors.visual": [
-        "#BB9AF7",
-        "#24283B"
-    ],
-    "vim.statusBarColors.visualline": [
-        "#7AA2F7",
-        "#24283B"
-    ],
-    "vim.statusBarColors.visualblock": [
-        "#FF9E64",
-        "#24283B"
-    ],
-    "vim.statusBarColors.searchinprogressmode": [
-        "#545C7E",
-        "#ffffff"
-    ],
-    "liveServer.settings.ChromeDebuggingAttachment": false,
-    "liveServer.settings.CustomBrowser": "chrome",
-    "liveServer.settings.donotShowInfoMsg": true,
-    //Smart relative lines
-    "vim.smartRelativeLine": true,
-    //Word Separators
-    "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?",
-    //Yank to System Clipboard 
-    "vim.useSystemClipboard": true,
-    //Highliht yanked text
-    "vim.highlightedyank.enable": true,
-    "vim.highlightedyank.color": "#bb9af750",
-    "vim.highlightedyank.duration": 750,
-    "editor.semanticHighlighting.enabled": true
+  "workbench.colorTheme": "Tokyo Night Storm",
+  "terminal.integrated.fontFamily": "'JetBrainsMono Nerd Font'",
+  "editor.minimap.enabled": false,
+  "editor.fontSize": 18,
+  "editor.fontFamily": "'JetBrainsMono Nerd Font'",
+  "terminal.integrated.fontSize": 16,
+  "workbench.startupEditor": "none",
+  "window.menuBarVisibility": "toggle",
+  "editor.stickyScroll.enabled": false,
+  "breadcrumbs.enabled": false,
+  "editor.lineNumbers": "relative",
+  "editor.cursorSurroundingLines": 10,
+  // "workbench.colorCustomizations": {
+  //     "editor.findMatchBackground": "#7dcfff50",
+  //     "editor.findMatchHighlightBackground": "#bb9af750",
+  //     "editor.selectionBackground": "#7dcfff50",
+  //     "editor.selectionHighlightBackground": "#bb9af750",
+  //     "statusBar.background": "#24283B",
+  //     "statusBar.noFolderBackground": "#24283B",
+  //     "statusBar.debuggingBackground": "#24283B",
+  //     "statusBar.foreground": "#ffffff",
+  //     "statusBar.debuggingForeground": "#ffffff",
+  //     "editor.linkedEditingBackground": "#ff0000",
+  //     "editor.wordHighlightBackground": "#7aa2f783"
+  // },
+  // Smart relative lines
+  "vim.smartRelativeLine": true,
+  // Word Separators
+  "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?",
+  // Yank to System Clipboard
+  "vim.useSystemClipboard": true,
+  // Highlight yanked text
+  "vim.highlightedyank.enable": true,
+  "vim.highlightedyank.color": "#ff9e6470",
+  "vim.highlightedyank.duration": 750,
+  "editor.semanticHighlighting.enabled": true,
+  "editor.guides.indentation": false,
+  "editor.folding": false,
+  "editor.glyphMargin": false,
+  "zenMode.hideLineNumbers": false,
+  "editor.scrollbar.vertical": "hidden",
+  "editor.scrollbar.horizontal": "hidden",
+  "editor.overviewRulerBorder": false,
+  "editor.hideCursorInOverviewRuler": true,
+  "editor.selectionHighlight": false,
+  "editor.renderLineHighlight": "none",
+  // Leave insert mode with "jj"
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["j", "j"],
+      "after": ["<Esc>"]
+    }
+  ],
+  "terminal.integrated.shellIntegration.decorationsEnabled": "never",
+  // Status bar colors
+  "vim.statusBarColors.easymotioninputmode": "",
+  "vim.statusBarColorControl": true,
+  "vim.statusBarColors.insert": ["#24283b", "#c3e88d"],
+  "vim.statusBarColors.commandlineinprogress": ["#24283B", "#ff9e64"],
+  "vim.statusBarColors.normal": ["#24283B", "#565f89"],
+  "vim.statusBarColors.visual": ["#24283B", "#BB9AF7"],
+  "vim.statusBarColors.visualline": ["#24283B", "#BB9AF7"],
+  "vim.statusBarColors.visualblock": ["#24283B", "#BB9AF7"],
+  "vim.statusBarColors.searchinprogressmode": ["#24283B", "#ff9e64"],
+  "workbench.colorCustomizations": {
+    "statusBar.background": "#24283B",
+    "statusBar.noFolderBackground": "#24283B",
+    "statusBar.debuggingBackground": "#24283B",
+    "statusBar.foreground": "#BB9AF7",
+    "statusBar.debuggingForeground": "#BB9AF7"
+  }
 }
+
