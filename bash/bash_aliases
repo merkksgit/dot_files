@@ -13,6 +13,9 @@ alias ccls='cd && cls'
 # alias ll='ls -alF'
 alias ll='ls -lha'
 alias la='ls -A'
+# show only dot files and directories
+alias lh='ls -lAd .*'
+
 
 # move up 1,2 or 3 directories
 alias ..='cd ../'
@@ -58,4 +61,5 @@ alias todor="todo remove"
 alias todoe="todo edit"
 alias todoc="todo clear"
 alias todoh="todo help"
+alias todos="todo search"
 
