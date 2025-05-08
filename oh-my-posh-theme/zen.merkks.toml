@@ -7,81 +7,87 @@ type = 'prompt'
 alignment = 'left'
 # newline = true
 
-  [[blocks.segments]]
-  type = "text"
-  style = "plain"
-  template = "\n"
+[[blocks.segments]]
+type = "text"
+style = "plain"
+template = "\n"
 
 [secondary_prompt]
-  # template = '❯❯ '
-  template = '$ '
-  foreground = '#9d7cd8'
-  background = 'transparent'
+# template = '❯❯ '
+template = '$ '
+foreground = '#9d7cd8'
+background = 'transparent'
 
 [transient_prompt]
-  # template = '❯ '
-  template = '$ '
-  foreground = ''
-  background = 'transparent'
-  foreground_templates = ['{{if gt .Code 0}}red{{end}}', '{{if eq .Code 0}}#9d7cd8{{end}}']
+# template = '❯ '
+template = '$ '
+foreground = ''
+background = 'transparent'
+foreground_templates = [
+  '{{if gt .Code 0}}red{{end}}',
+  '{{if eq .Code 0}}#9d7cd8{{end}}',
+]
 
-  [[blocks.segments]]
-    style = 'plain'
-    template = '{{ .Path }}'
-    foreground = '#7aa2f7'
-    background = 'transparent'
-    type = 'path'
+[[blocks.segments]]
+style = 'plain'
+template = '{{ .Path }}'
+foreground = '#7aa2f7'
+background = 'transparent'
+type = 'path'
 
-    [blocks.segments.properties]
-      home_icon = '󰜥'
-      style = 'full'
+[blocks.segments.properties]
+# home_icon = '󰜥'
+home_icon = '~'
+style = 'full'
 
-  [[blocks.segments]]
-    style = 'plain'
-    template = ' {{ .HEAD }}</><cyan>{{ if or (.Working.Changed) (.Staging.Changed) }} 󱐋{{ end }} <#ff757f>{{ if gt .Behind 0 }} {{ end }}</><#c3e88d>{{ if gt .Ahead 0 }}{{ end }}</>'
-    foreground = '#f2f2f2'
-    background = 'transparent'
-    type = 'git'
+[[blocks.segments]]
+style = 'plain'
+template = ' {{ .HEAD }} </><cyan>{{ if or (.Working.Changed) (.Staging.Changed) }}󱐋 {{ end }}<#ff757f>{{ if gt .Behind 0 }} {{ end }}</><#c3e88d>{{ if gt .Ahead 0 }} {{ end }}</>'
+foreground = '#f2f2f2'
+background = 'transparent'
+type = 'git'
 
-    [blocks.segments.properties]
-      # branch_icon = ' '
-      branch_icon = 'git  '
-      # branch_icon = 'git  '
-      commit_icon = '@'
-      fetch_status = true
+[blocks.segments.properties]
+# branch_icon = ' '
+branch_icon = 'git  '
+# branch_icon = 'git  '
+commit_icon = '@'
+fetch_status = true
 
-    [[blocks.segments]]
-    style = 'plain'
-    template = ' {{ if .Env.VIRTUAL_ENV }}[{{ base .Env.VIRTUAL_ENV }}]{{ end }}'
-    foreground = '#c3e88d'
-    background = 'transparent'
-    type = 'text'
-
-[[blocks]]
-  type = 'rprompt'
-  overflow = 'hidden'
-
-  [[blocks.segments]]
-    style = 'plain'
-    template = '{{ .FormattedMs }}'
-    foreground = 'yellow'
-    background = 'transparent'
-    type = 'executiontime'
-
-    [blocks.segments.properties]
-      threshold = 5000
+[[blocks.segments]]
+style = 'plain'
+template = '{{ if .Env.VIRTUAL_ENV }}[{{ base .Env.VIRTUAL_ENV }}]{{ end }}'
+foreground = '#c3e88d'
+background = 'transparent'
+type = 'text'
 
 [[blocks]]
-  type = 'prompt'
-  alignment = 'left'
-  newline = true
+type = 'rprompt'
+overflow = 'hidden'
 
-  [[blocks.segments]]
-    style = 'plain'
-    # template = '❯'
-    template = '$'
-    foreground = ''
-    background = 'transparent'
-    type = 'text'
-    foreground_templates = ['{{if gt .Code 0}}red{{end}}', '{{if eq .Code 0}}#9d7cd8{{end}}']
+[[blocks.segments]]
+style = 'plain'
+template = '{{ .FormattedMs }}'
+foreground = 'yellow'
+background = 'transparent'
+type = 'executiontime'
 
+[blocks.segments.properties]
+threshold = 5000
+
+[[blocks]]
+type = 'prompt'
+alignment = 'left'
+newline = true
+
+[[blocks.segments]]
+style = 'plain'
+# template = '❯'
+template = '$'
+foreground = ''
+background = 'transparent'
+type = 'text'
+foreground_templates = [
+  '{{if gt .Code 0}}red{{end}}',
+  '{{if eq .Code 0}}#9d7cd8{{end}}',
+]
