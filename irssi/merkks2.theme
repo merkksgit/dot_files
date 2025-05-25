@@ -28,10 +28,10 @@ abstracts = {
   ##
 
   # text to insert at the beginning of each non-message line
-  line_start = "%m*%M*%m*%n ";
+  line_start = "%Y*%Y*%Y*%n ";
 
   # timestamp styling, nothing by default
-  timestamp = "%b$*";
+  timestamp = "%b[%w$*%b]";
 
   # any kind of text that needs hilighting, default is to bold
   hilight = "%_$*%_";
@@ -228,15 +228,15 @@ abstracts = {
 
   # text at the beginning of statusbars. sb-item already puts
   # space there,so we don't use anything by default.
-  sbstart = "";
+  sbstart = "%y###";
   # text at the end of statusbars. Use space so that it's never
   # used for anything.
-  sbend = " ";
+  sbend = "%y###";
 
   topicsbstart = "{sbstart $*}";
   topicsbend = "{sbend $*}";
 
-  prompt = "%b[%Y$*%b] %Y>> ";
+  prompt = " %b[%Y$*%b] ";
 
   sb = " %b[%m$*%b]%n";
   sbmode = "(%m+%m$*)";
