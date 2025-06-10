@@ -12,8 +12,6 @@ return {
     },
     highlights = {
       fill = {
-        -- palkin väri
-        -- bg = "#1b1e2c",
         bg = "#131620",
       },
       buffer_selected = {

@@ -1,10 +1,10 @@
 return {
   {
     "folke/tokyonight.nvim",
-    priority = 1000, -- make sure to load this before all the other start plugins
+    priority = 1000,
     config = function()
       local bg = "#24283B"
-      local bg_dark = "#1F2335"
+      local bg_dark = "#24283b"
       local bg_highlight = "#3B4261"
       local bg_search = "#0A64AC"
       local bg_visual = "#275378"
@@ -12,6 +12,9 @@ return {
       local fg_dark = "#B4D0E9"
       local fg_gutter = "#627E97"
       local border = "#547998"
+      VertSplit = {
+        fg = "#1b1d2b",
+      }
 
       require("tokyonight").setup({
         style = "night",

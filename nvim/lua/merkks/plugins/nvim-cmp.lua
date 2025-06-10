@@ -23,7 +23,7 @@ return {
     require("luasnip.loaders.from_vscode").lazy_load()
 
     -- Set highlight group for completion window
-    vim.api.nvim_set_hl(0, "CmpNormal", { bg = "#282828" }) -- Customize the background color here
+    vim.api.nvim_set_hl(0, "CmpNormal", { bg = "#24283b" }) -- Customize the background color here
     vim.api.nvim_set_hl(0, "MyBorderColor", { fg = "#bb9af7" }) -- Border color
 
     cmp.setup({
