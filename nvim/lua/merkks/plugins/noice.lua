@@ -1,6 +1,7 @@
 return {
   {
     "folke/noice.nvim",
+    -- enabled = false,
     event = "VeryLazy",
     opts = {
       cmdline = {
@@ -9,17 +10,33 @@ return {
         opts = {
           border = {
             style = "single",
+            text = {
+              top = "",
+            },
           },
         },
         format = {
           cmdline = { pattern = "^:", icon = ":", lang = "vim" },
         },
       },
+      messages = {
+        enabled = true,
+        view = "notify",
+        view_error = "notify",
+        view_warn = "notify",
+        view_history = "messages",
+        view_search = "virtualtext",
+      },
+      notify = {
+        enabled = true,
+        view = "notify",
+      },
       -- Macro recording notification
       routes = {
         {
           view = "notify",
           filter = { event = "msg_showmode", find = "recording" },
+          opts = { timeout = 0 },
         },
       },
       lsp = {

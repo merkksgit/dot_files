@@ -34,6 +34,9 @@ opt.smartcase = true -- if you include mixed case in your search, assumes you wa
 opt.cursorline = true -- highlight the current cursor line
 
 -- appearance
+
+-- turn on termguicolors for nightfly colorscheme to work
+-- (have to use iterm2 or any other true color terminal)
 opt.termguicolors = true
 opt.background = "dark" -- colorschemes that can be light or dark will be made dark
 opt.signcolumn = "yes" -- show sign column so that text doesn't shift
@@ -51,6 +54,12 @@ opt.splitbelow = true -- split horizontal window to the bottom
 -- turn off swapfile
 opt.swapfile = false
 
+vim.diagnostic.config({
+  virtual_lines = {
+    current_line = true,
+  },
+})
+
 -- undotree
 vim.opt.undofile = true
 vim.opt.undodir = vim.fn.expand("~/.undodir")
@@ -58,7 +67,7 @@ vim.opt.undodir = vim.fn.expand("~/.undodir")
 -- highlighted yank
 vim.api.nvim_create_autocmd("TextYankPost", {
   group = vim.api.nvim_create_augroup("highlight_yank", {}),
-  desc = "Highlight selection yank",
+  desc = "Hightlight selection on yank",
   pattern = "*",
   callback = function()
     vim.highlight.on_yank({ higroup = "IncSearch", timeout = 500 })
@@ -68,16 +77,12 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 -- exit terminal mode using the Escape key
 vim.api.nvim_create_autocmd("TermOpen", {
   callback = function(args)
-    -- List of terminal programs where we want normal Esc behavior
     local excluded_programs = {
       "lazygit",
       "node",
       "htop",
-      -- add more programs as needed
     }
-    -- Get buffer name
     local bufname = vim.api.nvim_buf_get_name(args.buf)
-    -- Check if buffer name contains any of the excluded programs
     for _, program in ipairs(excluded_programs) do
       if bufname:match(program) then
         return
@@ -90,3 +95,10 @@ vim.api.nvim_create_autocmd("TermOpen", {
     })
   end,
 })
+
+-- Show errors and warnings in a floating window
+-- vim.api.nvim_create_autocmd("CursorHold", {
+--   callback = function()
+--     vim.diagnostic.open_float(nil, { focusable = false, source = "if_many" })
+--   end,
+-- })
