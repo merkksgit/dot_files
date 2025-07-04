@@ -124,6 +124,9 @@ ul {
   position: relative;
   display: list-item;
   margin: auto;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 #vomnibar li:last-of-type {
@@ -237,7 +240,7 @@ ul {
   }
 
   #vomnibar li.selected {
-    background-color: #3b4261;
+    background-color: #282e44;
     font-weight: normal;
     border-radius: 4px;
     margin: 2px 2px;
