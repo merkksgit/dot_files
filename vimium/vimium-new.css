@@ -182,11 +182,14 @@ ul {
   #vomnibar li {
     border-bottom: 1px solid #414868;
     color: #f2f2f2;
+    border-bottom: none;
   }
 
   #vomnibar li.selected {
     background-color: #3b4261;
     font-weight: normal;
+    border-radius: 4px;
+    margin: 2px 2px;
   }
 
   #vomnibar li .url {
