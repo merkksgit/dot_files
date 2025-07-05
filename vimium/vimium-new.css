@@ -292,3 +292,14 @@ div.vimiumHUD .vimiumHUDSearchAreaInner {
   background-color: #1f2335;
   box-shadow: none;
 }
+
+.vimium-ui-component #hud-match-count {
+  font-family: "JetBrainsMono Nerd Font", monospace;
+}
+
+#hud.hud-find,
+#hud.hud-find.vimium-ui-component-hidden {
+  color: #ff9e64 !important;
+  caret-color: transparent !important;
+  font-family: "JetBrainsMono Nerd Font", monospace !important;
+}
