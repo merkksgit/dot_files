@@ -7,14 +7,11 @@ return {
     { "folke/neodev.nvim", opts = {} },
   },
   config = function()
-    -- import lspconfig plugin
-    local lspconfig = require("lspconfig")
+    -- import cmp-nvim-lsp plugin
+    local cmp_nvim_lsp = require("cmp_nvim_lsp")
 
     -- import mason_lspconfig plugin
     local mason_lspconfig = require("mason-lspconfig")
-
-    -- import cmp-nvim-lsp plugin
-    local cmp_nvim_lsp = require("cmp_nvim_lsp")
 
     local keymap = vim.keymap -- for conciseness
 
@@ -55,9 +52,6 @@ return {
         opts.desc = "Show buffer diagnostics"
         keymap.set("n", "<leader>D", "<cmd>Telescope diagnostics bufnr=0<CR>", opts) -- show  diagnostics for file
 
-        -- opts.desc = "Show line diagnostics"
-        -- keymap.set("n", "<leader>d", vim.diagnostic.open_float, opts) -- show diagnostics for line
-
         opts.desc = "Show documentation for what is under cursor"
         keymap.set("n", "K", vim.lsp.buf.hover, opts) -- show documentation for what is under cursor
 
@@ -84,13 +78,13 @@ return {
     mason_lspconfig.setup_handlers({
       -- default handler for installed servers
       function(server_name)
-        lspconfig[server_name].setup({
+        vim.lsp.config(server_name, {
           capabilities = capabilities,
         })
       end,
       ["svelte"] = function()
         -- configure svelte server
-        lspconfig["svelte"].setup({
+        vim.lsp.config("svelte", {
           capabilities = capabilities,
           on_attach = function(client, bufnr)
             vim.api.nvim_create_autocmd("BufWritePost", {
@@ -105,21 +99,21 @@ return {
       end,
       ["graphql"] = function()
         -- configure graphql language server
-        lspconfig["graphql"].setup({
+        vim.lsp.config("graphql", {
           capabilities = capabilities,
           filetypes = { "graphql", "gql", "svelte", "typescriptreact", "javascriptreact" },
         })
       end,
       ["emmet_ls"] = function()
         -- configure emmet language server
-        lspconfig["emmet_ls"].setup({
+        vim.lsp.config("emmet_ls", {
           capabilities = capabilities,
           filetypes = { "html", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less", "svelte" },
         })
       end,
       ["lua_ls"] = function()
         -- configure lua server (with special settings)
-        lspconfig["lua_ls"].setup({
+        vim.lsp.config("lua_ls", {
           capabilities = capabilities,
           settings = {
             Lua = {
