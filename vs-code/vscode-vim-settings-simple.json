@@ -1,0 +1,39 @@
+{
+  "editor.fontFamily": "JetBrainsMonoNL Nerd Font, monospace",
+  "editor.fontSize": 18,
+  "workbench.startupEditor": "none",
+  "workbench.colorTheme": "Tokyo Night Storm",
+  "security.allowedUNCHosts": ["wsl.localhost"],
+  "terminal.integrated.fontSize": 18,
+  "vim.smartRelativeLine": true,
+  "vim.useSystemClipboard": true,
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["j", "j"],
+      "after": ["<Esc>"]
+    }
+  ],
+  "vim.timeout": 400,
+  "vim.insertModeKeyBindingsNonRecursive": [
+    {
+      "before": ["j", "j"],
+      "after": ["<Esc>"]
+    }
+  ],
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.formatOnSave": true,
+  "vim.commandLineModeKeyBindings": [],
+  "workbench.colorCustomizations": {
+    "editor.findMatchBackground": "#ff9e64",
+    "editor.findMatchHighlightBackground": "#ff9e6490",
+    "editor.findRangeHighlightBackground": "#ff9e6490"
+  },
+  "editor.guides.indentation": false,
+  "editor.fastScrollSensitivity": 10,
+  "editor.stickyScroll.maxLineCount": 10,
+  "workbench.list.fastScrollSensitivity": 0,
+  "workbench.panel.defaultLocation": "right",
+  "workbench.iconTheme": "material-icon-theme"
+}
